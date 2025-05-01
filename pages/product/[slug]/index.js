@@ -17,6 +17,8 @@ export default function ProductPage() {
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
             <link rel="stylesheet" href="/css/index.css" />
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+            <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
             <Header_Main />
             <Breadcrumb />
             <SectionProduct />
