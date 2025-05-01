@@ -4,7 +4,7 @@ import SidePanel from "../../components/panel/SidePanel";
 import AdminLayout from "../AdminLayout";
 import { useState, useEffect } from 'react';
 import Footer from "../../components/panel/Footer";
-import PerfectScrollbar from 'perfect-scrollbar';
+
 
 export default function AdminDashboard() {
   useEffect(() => {
