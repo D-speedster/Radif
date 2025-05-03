@@ -7,12 +7,6 @@ import Footer from "../../components/panel/Footer";
 
 
 export default function AdminDashboard() {
-  useEffect(() => {
-    if (typeof window !== 'undefined' && window.$) {
-      // کد jQuery شما
-      window.$('#myElement').hide();
-    }
-  }, [])
 
   return (
     <>

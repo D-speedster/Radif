@@ -7,7 +7,7 @@ export default function Header_Main() {
                     style={{ maxWidth: '1450.8px' }}
                 >
 
-                    <a class=" " href="#">
+                    <a class="" href="/">
                         <img src="/img/radif-logo.svg" alt="logo" class="ms-2 logos" />
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">

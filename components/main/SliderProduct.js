@@ -92,7 +92,7 @@ const PopularProductsSlider = () => {
           <h2 className="section-title">پر بازدیدترین محصولات</h2>
           <a href="#">مشاهده تمامی محصولات </a>
         </div>
-        
+
         <Swiper
           slidesPerView={1}
           spaceBetween={10}
@@ -119,7 +119,7 @@ const PopularProductsSlider = () => {
         >
           {products.map((product) => (
             <SwiperSlide key={product.id}>
-              <Link href={`/product/${product.title}`}>
+              <Link href={`/product/${product.title}`} style={{ textDecoration: 'none', color : '#000'}}>
                 <div className="item-product">
                   <div className="product-img">
                     <img src={product.image} className="img-fluid" alt={product.title} />
