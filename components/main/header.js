@@ -21,10 +21,10 @@ export default function Header_Main() {
                         class="collapse navbar-collapse justify-content-between"
                         id="navbarNav">
                         <ul class="navbar-nav">
-                            <li class="nav-item"><Link href="#" class="nav-link">همه دسته‌بندی‌ها</Link></li>
-                            <li class="nav-item"><Link href="#" class="nav-link">فروش ویژه</Link></li>
+                            <li class="nav-item"><Link href="/Category" class="nav-link">همه دسته‌بندی‌ها</Link></li>
+                            <li class="nav-item"><Link href="/Special-Offers" class="nav-link">فروش ویژه</Link></li>
                             <li class="nav-item"><Link href="/Blog" class="nav-link">وبلاگ</Link></li>
-                            <li class="nav-item"><Link href="#" class="nav-link">نحوه استفاده</Link></li>
+                            <li class="nav-item"><Link href="/how-to-use" class="nav-link">نحوه استفاده</Link></li>
                             <li class="nav-item"><Link href="/info/About" class="nav-link">درباره ما</Link></li>
                         </ul>
 
