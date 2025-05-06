@@ -300,57 +300,6 @@ function names() {
 	//get variable
 	myVarVal = localStorage.getItem("spruhaprimaryColor") || localStorage.getItem("spruhadarkPrimary") || primaryColorVal;
 
-	if (document.querySelector('#project') !== null) {
-		index();
-	}
-
-	if (document.querySelector('#bar-chart') !== null) {
-		barchart();
-	}
-
-	if (document.querySelector('.forth.circle') !== null) {
-		forthcircle();
-	}
-
-	if (document.querySelector('#btc_chart') !== null) {
-		btcchart();
-	}
-
-	if (document.querySelector('#cryptoChart2') !== null) {
-		cryptoChart2();
-	}
-
-	if (document.querySelector('#sparkline11') !== null) {
-		spark1();
-	}
-
-	if (document.querySelector('#sparkline12') !== null) {
-		spark2();
-	}
-
-	if (document.querySelector('#sparkline13') !== null) {
-		spark3();
-	}
-
-	if (document.querySelector('#sparkline14') !== null) {
-		spark4();
-	}
-
-	if (document.querySelector('#crypto-donut') !== null) {
-		cryptodonut();
-	}
-
-	if (document.querySelector('#revenuechart') !== null) {
-		revenuechart();
-	}
-
-	if (document.querySelector('#recentorders') !== null) {
-		recentorders();
-	}
-
-	if (document.querySelector('#world-map-markers') !== null) {
-		vectormap();
-	}
 
 
 
