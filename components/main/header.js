@@ -10,9 +10,9 @@ export default function Header_Main() {
                     style={{ maxWidth: '1450.8px' }}
                 >
 
-                    <a class="" href="/">
+                    <Link class="" href="/">
                         <img src="/img/radif-logo.svg" alt="logo" class="ms-2 logos" />
-                    </a>
+                    </Link>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -23,9 +23,9 @@ export default function Header_Main() {
                         <ul class="navbar-nav">
                             <li class="nav-item"><Link href="#" class="nav-link">همه دسته‌بندی‌ها</Link></li>
                             <li class="nav-item"><Link href="#" class="nav-link">فروش ویژه</Link></li>
-                            <li class="nav-item"><Link href="#" class="nav-link">وبلاگ</Link></li>
+                            <li class="nav-item"><Link href="/Blog" class="nav-link">وبلاگ</Link></li>
                             <li class="nav-item"><Link href="#" class="nav-link">نحوه استفاده</Link></li>
-                            <li class="nav-item"><Link href="/About-Us" class="nav-link">درباره ما</Link></li>
+                            <li class="nav-item"><Link href="/info/About" class="nav-link">درباره ما</Link></li>
                         </ul>
 
 
