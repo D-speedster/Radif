@@ -5,9 +5,73 @@ import Breadcrumb from '../../../components/product/Breadcrumb'
 import SectionProduct from '../../../components/product/sectionProduct'
 import FooterMain from '../../../components/main/FooterMain'
 import SliderProduct from '../../../components/main/SliderProduct'
+import SellersComponent from '../../../components/product/sellers'
+
 export default function ProductPage() {
     const router = useRouter()
     const { slug } = router.query
+    let products = [
+
+        {
+            id: 2,
+            title: 'لپ‌تاپ ایسوس VivoBook X1502 | i7 نسل 12 | رم 16 | SSD یک ترابایت',
+            price: 48500000,
+            img: '/img/وکتور-لوگو-آرم-ایسوس-راگ-1.png',
+            seller: 'فروشگاه رسمی ایسوس',
+            delivery: 'paid',
+            credit: 'yes'
+        },
+
+        {
+            id: 4,
+            title: 'هدفون بلوتوثی Sony WH-1000XM5 | نویز کنسلینگ حرفه‌ای',
+            price: 16900000,
+            img: '/img/وکتور-لوگو-آرم-سونی-1.png',
+            seller: 'سونی ایران',
+            delivery: 'free',
+            credit: 'yes'
+        },
+        {
+            id: 5,
+            title: 'کنسول بازی PS5 با درایو | 825 گیگابایت SSD | DualSense',
+            price: 26800000,
+            img: '/img/Logo-about-us.jpg',
+            seller: 'پی اس پرو',
+            delivery: 'paid',
+            credit: 'no'
+        },
+
+        {
+            id: 7,
+            title: 'تبلت Xiaomi Pad 6 | حافظه 256 گیگ | رم 8 گیگ | قلم استایلوس',
+            price: 17500000,
+            img: '/img/38c39eb7-c9b7-4f77-989c-852b214b78ef.webp',
+            seller: 'شیائومی استور',
+            delivery: 'paid',
+            credit: 'yes'
+        },
+
+        {
+            id: 9,
+            title: 'مانیتور گیمینگ Gigabyte G27Q | سایز 27 اینچ | 144Hz | QHD',
+            price: 16900000,
+            img: '',
+            seller: 'گیگابایت ایران',
+            delivery: 'paid',
+            credit: 'yes'
+        },
+  
+        {
+            id: 11,
+            title: 'پاوربانک Anker 20,000mAh | شارژ سریع PD | مدل A1281',
+            price: 2350000,
+            img: '',
+            seller: 'آنکر ایران',
+            delivery: 'paid',
+            credit: 'yes'
+        },
+       
+    ]
 
     return (
         <>
@@ -49,628 +113,9 @@ export default function ProductPage() {
 
                                     </div>
                                 </div>
-                                <div class="items-shop mt-3 ">
-                                    <div class="row">
-                                        <ul style={{ listStyle: 'none' }}>
+                                <SellersComponent {...products}></SellersComponent>
 
 
-                                            <div class="card shadow-sm rounded-4 border-0">
-                                                <div class="card-body p-3">
-
-
-                                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                                        <div class="d-flex align-items-center gap-2">
-
-                                                            <box-icon name="chevron-down"></box-icon>
-                                                            <div
-                                                                style={{ width: '1px', height: '24px', backgroundColor: '#dee2e6', margin: '0 10px' }} >
-                                                            </div>
-
-                                                            <img src="/img/digi.png" width="32" height="32"
-                                                                style={{ borderRadius: '50%' }} />
-                                                            <span style={{ fontSize: '18px' }} class="fw-semibold">دیجی
-                                                                کالا</span>
-                                                        </div>
-
-                                                        <button
-                                                            class="btn btn-sm btn-light border rounded-pill px-3 d-flex align-items-center gap-1">
-                                                            <box-icon name="dots-horizontal-rounded"></box-icon>
-                                                            <span>گزینه‌ها</span>
-                                                        </button>
-                                                    </div>
-
-                                                    <hr class="my-2" />
-
-
-                                                    <div class="mb-2">
-                                                        <span class="fw-medium">گوشی آیفون 16 حافظه 256 گیگ رم 8 گیگ |
-                                                            iPhone 16 | نات اکتیو</span>
-                                                    </div>
-
-
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <span class="fw-bold text-success fs-5">101,400,000 تومان</span>
-                                                        <div class="d-flex align-items-center gap-1 text-primary">
-                                                            <box-icon name="truck" color="#0d6efd"></box-icon>
-                                                            <span>ارسال رایگان</span>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                        </ul>
-
-                                    </div>
-                                </div>
-                                <div class="items-shop mt-3 ">
-                                    <div class="row">
-                                        <ul style={{ listStyle: 'none' }}>
-
-
-                                            <div class="card shadow-sm rounded-4 border-0">
-                                                <div class="card-body p-3">
-
-
-                                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                                        <div class="d-flex align-items-center gap-2">
-
-                                                            <box-icon name="chevron-down"></box-icon>
-                                                            <div
-                                                                style={{ width: '1px', height: '24px', backgroundColor: '#dee2e6', margin: '0 10px' }} >
-                                                            </div>
-
-                                                            <img src="/img/digi.png" width="32" height="32"
-                                                                style={{ borderRadius: '50%' }} />
-                                                            <span style={{ fontSize: '18px' }} class="fw-semibold">دیجی
-                                                                کالا</span>
-                                                        </div>
-
-                                                        <button
-                                                            class="btn btn-sm btn-light border rounded-pill px-3 d-flex align-items-center gap-1">
-                                                            <box-icon name="dots-horizontal-rounded"></box-icon>
-                                                            <span>گزینه‌ها</span>
-                                                        </button>
-                                                    </div>
-
-                                                    <hr class="my-2" />
-
-
-                                                    <div class="mb-2">
-                                                        <span class="fw-medium">گوشی آیفون 16 حافظه 256 گیگ رم 8 گیگ |
-                                                            iPhone 16 | نات اکتیو</span>
-                                                    </div>
-
-
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <span class="fw-bold text-success fs-5">101,400,000 تومان</span>
-                                                        <div class="d-flex align-items-center gap-1 text-primary">
-                                                            <box-icon name="truck" color="#0d6efd"></box-icon>
-                                                            <span>ارسال رایگان</span>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-
-
-                                        </ul>
-
-                                    </div>
-                                </div>
-                                <div class="items-shop mt-3 ">
-                                    <div class="row">
-                                        <ul style={{ listStyle: 'none' }}>
-
-
-                                            <div class="card shadow-sm rounded-4 border-0">
-                                                <div class="card-body p-3">
-
-
-                                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                                        <div class="d-flex align-items-center gap-2">
-
-                                                            <box-icon name="chevron-down"></box-icon>
-                                                            <div
-                                                                style={{ width: '1px', height: '24px', backgroundColor: '#dee2e6', margin: '0 10px' }}
-
-
-                                                            >
-                                                            </div>
-
-                                                            <img src="/img/digi.png" width="32" height="32"
-                                                                style={{ borderRadius: '50%' }}
-
-                                                            />
-                                                            <span
-                                                                style={{ fontSize: '18px' }}
-                                                                class="fw-semibold">دیجی
-                                                                کالا</span>
-                                                        </div>
-
-                                                        <button
-                                                            class="btn btn-sm btn-light border rounded-pill px-3 d-flex align-items-center gap-1">
-                                                            <box-icon name="dots-horizontal-rounded"></box-icon>
-                                                            <span>گزینه‌ها</span>
-                                                        </button>
-                                                    </div>
-
-                                                    <hr class="my-2" />
-
-
-                                                    <div class="mb-2">
-                                                        <span class="fw-medium">گوشی آیفون 16 حافظه 256 گیگ رم 8 گیگ |
-                                                            iPhone 16 | نات اکتیو</span>
-                                                    </div>
-
-
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <span class="fw-bold text-success fs-5">101,400,000 تومان</span>
-                                                        <div class="d-flex align-items-center gap-1 text-primary">
-                                                            <box-icon name="truck" color="#0d6efd"></box-icon>
-                                                            <span>ارسال رایگان</span>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                        </ul>
-
-                                    </div>
-                                </div>
-                                <div class="items-shop mt-3 ">
-                                    <div class="row">
-                                        <ul style={{ listStyle: 'none' }}>
-
-
-                                            <div class="card shadow-sm rounded-4 border-0">
-                                                <div class="card-body p-3">
-
-
-                                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                                        <div class="d-flex align-items-center gap-2">
-
-                                                            <box-icon name="chevron-down"></box-icon>
-                                                            <div
-                                                                style={{ width: '1px', height: '24px', backgroundColor: '#dee2e6', margin: '0 10px' }} >
-                                                            </div>
-
-                                                            <img src="/img/digi.png" width="32" height="32"
-                                                                style={{ borderRadius: '50%' }} />
-                                                            <span style={{ fontSize: '18px' }} class="fw-semibold">دیجی
-                                                                کالا</span>
-                                                        </div>
-
-                                                        <button
-                                                            class="btn btn-sm btn-light border rounded-pill px-3 d-flex align-items-center gap-1">
-                                                            <box-icon name="dots-horizontal-rounded"></box-icon>
-                                                            <span>گزینه‌ها</span>
-                                                        </button>
-                                                    </div>
-
-                                                    <hr class="my-2" />
-
-
-                                                    <div class="mb-2">
-                                                        <span class="fw-medium">گوشی آیفون 16 حافظه 256 گیگ رم 8 گیگ |
-                                                            iPhone 16 | نات اکتیو</span>
-                                                    </div>
-
-
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <span class="fw-bold text-success fs-5">101,400,000 تومان</span>
-                                                        <div class="d-flex align-items-center gap-1 text-primary">
-                                                            <box-icon name="truck" color="#0d6efd"></box-icon>
-                                                            <span>ارسال رایگان</span>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-
-                                        </ul>
-
-                                    </div>
-                                </div>
-                                <div class="items-shop mt-3 ">
-                                    <div class="row">
-                                        <ul style={{ listStyle: 'none' }}>
-
-
-                                            <div class="card shadow-sm rounded-4 border-0">
-                                                <div class="card-body p-3">
-
-
-                                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                                        <div class="d-flex align-items-center gap-2">
-
-                                                            <box-icon name="chevron-down"></box-icon>
-                                                            <div
-                                                                style={{ width: '1px', height: '24px', backgroundColor: '#dee2e6', margin: '0 10px' }} >
-                                                            </div>
-
-                                                            <img src="/img/digi.png" width="32" height="32"
-                                                                style={{ borderRadius: '50%' }} />
-                                                            <span style={{ fontSize: '18px' }} class="fw-semibold">دیجی
-                                                                کالا</span>
-                                                        </div>
-
-                                                        <button
-                                                            class="btn btn-sm btn-light border rounded-pill px-3 d-flex align-items-center gap-1">
-                                                            <box-icon name="dots-horizontal-rounded"></box-icon>
-                                                            <span>گزینه‌ها</span>
-                                                        </button>
-                                                    </div>
-
-                                                    <hr class="my-2" />
-
-
-                                                    <div class="mb-2">
-                                                        <span class="fw-medium">گوشی آیفون 16 حافظه 256 گیگ رم 8 گیگ |
-                                                            iPhone 16 | نات اکتیو</span>
-                                                    </div>
-
-
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <span class="fw-bold text-success fs-5">101,400,000 تومان</span>
-                                                        <div class="d-flex align-items-center gap-1 text-primary">
-                                                            <box-icon name="truck" color="#0d6efd"></box-icon>
-                                                            <span>ارسال رایگان</span>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-
-                                        </ul>
-
-                                    </div>
-                                </div>
-                                <div class="items-shop mt-3 ">
-                                    <div class="row">
-                                        <ul style={{ listStyle: 'none' }}>
-
-
-                                            <div class="card shadow-sm rounded-4 border-0">
-                                                <div class="card-body p-3">
-
-
-                                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                                        <div class="d-flex align-items-center gap-2">
-
-                                                            <box-icon name="chevron-down"></box-icon>
-                                                            <div
-                                                                style={{ width: '1px', height: '24px', backgroundColor: '#dee2e6', margin: '0 10px' }} >
-                                                            </div>
-
-                                                            <img src="/img/digi.png" width="32" height="32"
-                                                                style={{ borderRadius: '50%' }} />
-                                                            <span style={{ fontSize: '18px' }} class="fw-semibold">دیجی
-                                                                کالا</span>
-                                                        </div>
-
-                                                        <button
-                                                            class="btn btn-sm btn-light border rounded-pill px-3 d-flex align-items-center gap-1">
-                                                            <box-icon name="dots-horizontal-rounded"></box-icon>
-                                                            <span>گزینه‌ها</span>
-                                                        </button>
-                                                    </div>
-
-                                                    <hr class="my-2" />
-
-
-                                                    <div class="mb-2">
-                                                        <span class="fw-medium">گوشی آیفون 16 حافظه 256 گیگ رم 8 گیگ |
-                                                            iPhone 16 | نات اکتیو</span>
-                                                    </div>
-
-
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <span class="fw-bold text-success fs-5">101,400,000 تومان</span>
-                                                        <div class="d-flex align-items-center gap-1 text-primary">
-                                                            <box-icon name="truck" color="#0d6efd"></box-icon>
-                                                            <span>ارسال رایگان</span>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-
-                                        </ul>
-
-                                    </div>
-                                </div>
-                                <div class="items-shop mt-3 ">
-                                    <div class="row">
-                                        <ul style={{ listStyle: 'none' }}>
-
-
-                                            <div class="card shadow-sm rounded-4 border-0">
-                                                <div class="card-body p-3">
-
-
-                                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                                        <div class="d-flex align-items-center gap-2">
-
-                                                            <box-icon name="chevron-down"></box-icon>
-                                                            <div
-                                                                style={{ width: '1px', height: '24px', backgroundColor: '#dee2e6', margin: '0 10px' }} >
-                                                            </div>
-
-                                                            <img src="/img/digi.png" width="32" height="32"
-                                                                style={{ borderRadius: '50%' }} />
-                                                            <span style={{ fontSize: '18px' }} class="fw-semibold">دیجی
-                                                                کالا</span>
-                                                        </div>
-
-                                                        <button
-                                                            class="btn btn-sm btn-light border rounded-pill px-3 d-flex align-items-center gap-1">
-                                                            <box-icon name="dots-horizontal-rounded"></box-icon>
-                                                            <span>گزینه‌ها</span>
-                                                        </button>
-                                                    </div>
-
-                                                    <hr class="my-2" />
-
-
-                                                    <div class="mb-2">
-                                                        <span class="fw-medium">گوشی آیفون 16 حافظه 256 گیگ رم 8 گیگ |
-                                                            iPhone 16 | نات اکتیو</span>
-                                                    </div>
-
-
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <span class="fw-bold text-success fs-5">101,400,000 تومان</span>
-                                                        <div class="d-flex align-items-center gap-1 text-primary">
-                                                            <box-icon name="truck" color="#0d6efd"></box-icon>
-                                                            <span>ارسال رایگان</span>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-
-                                        </ul>
-
-                                    </div>
-                                </div>
-                                <div class="items-shop mt-3 ">
-                                    <div class="row">
-                                        <ul style={{ listStyle: 'none' }}>
-
-
-                                            <div class="card shadow-sm rounded-4 border-0">
-                                                <div class="card-body p-3">
-
-
-                                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                                        <div class="d-flex align-items-center gap-2">
-
-                                                            <box-icon name="chevron-down"></box-icon>
-                                                            <div
-                                                                style={{ width: '1px', height: '24px', backgroundColor: '#dee2e6', margin: '0 10px' }} >
-                                                            </div>
-
-                                                            <img src="/img/digi.png" width="32" height="32"
-                                                                style={{ borderRadius: '50%' }} />
-                                                            <span style={{ fontSize: '18px' }} class="fw-semibold">دیجی
-                                                                کالا</span>
-                                                        </div>
-
-                                                        <button
-                                                            class="btn btn-sm btn-light border rounded-pill px-3 d-flex align-items-center gap-1">
-                                                            <box-icon name="dots-horizontal-rounded"></box-icon>
-                                                            <span>گزینه‌ها</span>
-                                                        </button>
-                                                    </div>
-
-                                                    <hr class="my-2" />
-
-
-                                                    <div class="mb-2">
-                                                        <span class="fw-medium">گوشی آیفون 16 حافظه 256 گیگ رم 8 گیگ |
-                                                            iPhone 16 | نات اکتیو</span>
-                                                    </div>
-
-
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <span class="fw-bold text-success fs-5">101,400,000 تومان</span>
-                                                        <div class="d-flex align-items-center gap-1 text-primary">
-                                                            <box-icon name="truck" color="#0d6efd"></box-icon>
-                                                            <span>ارسال رایگان</span>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-
-
-
-
-
-
-
-                                        </ul>
-
-                                    </div>
-                                </div>
-                                <div class="items-shop mt-3 ">
-                                    <div class="row">
-                                        <ul style={{ listStyle: 'none' }}>
-
-
-                                            <div class="card shadow-sm rounded-4 border-0">
-                                                <div class="card-body p-3">
-
-
-                                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                                        <div class="d-flex align-items-center gap-2">
-
-                                                            <box-icon name="chevron-down"></box-icon>
-                                                            <div
-                                                                style={{ width: '1px', height: '24px', backgroundColor: '#dee2e6', margin: '0 10px' }} >
-                                                            </div>
-
-                                                            <img src="/img/digi.png" width="32" height="32"
-                                                                style={{ borderRadius: '50%' }} />
-                                                            <span style={{ fontSize: '18px' }} class="fw-semibold">دیجی
-                                                                کالا</span>
-                                                        </div>
-
-                                                        <button
-                                                            class="btn btn-sm btn-light border rounded-pill px-3 d-flex align-items-center gap-1">
-                                                            <box-icon name="dots-horizontal-rounded"></box-icon>
-                                                            <span>گزینه‌ها</span>
-                                                        </button>
-                                                    </div>
-
-                                                    <hr class="my-2" />
-
-
-                                                    <div class="mb-2">
-                                                        <span class="fw-medium">گوشی آیفون 16 حافظه 256 گیگ رم 8 گیگ |
-                                                            iPhone 16 | نات اکتیو</span>
-                                                    </div>
-
-
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <span class="fw-bold text-success fs-5">101,400,000 تومان</span>
-                                                        <div class="d-flex align-items-center gap-1 text-primary">
-                                                            <box-icon name="truck" color="#0d6efd"></box-icon>
-                                                            <span>ارسال رایگان</span>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-
-
-
-
-
-
-                                        </ul>
-
-                                    </div>
-                                </div>
-                                <div class="items-shop mt-3 ">
-                                    <div class="row">
-                                        <ul style={{ listStyle: 'none' }}>
-
-
-                                            <div class="card shadow-sm rounded-4 border-0">
-                                                <div class="card-body p-3">
-
-
-                                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                                        <div class="d-flex align-items-center gap-2">
-
-                                                            <box-icon name="chevron-down"></box-icon>
-                                                            <div
-                                                                style={{ width: '1px', height: '24px', backgroundColor: '#dee2e6', margin: '0 10px' }} >
-                                                            </div>
-
-                                                            <img src="/img/digi.png" width="32" height="32"
-                                                                style={{ borderRadius: '50%' }} />
-                                                            <span style={{ fontSize: '18px' }} class="fw-semibold">دیجی
-                                                                کالا</span>
-                                                        </div>
-
-                                                        <button
-                                                            class="btn btn-sm btn-light border rounded-pill px-3 d-flex align-items-center gap-1">
-                                                            <box-icon name="dots-horizontal-rounded"></box-icon>
-                                                            <span>گزینه‌ها</span>
-                                                        </button>
-                                                    </div>
-
-                                                    <hr class="my-2" />
-
-
-                                                    <div class="mb-2">
-                                                        <span class="fw-medium">گوشی آیفون 16 حافظه 256 گیگ رم 8 گیگ |
-                                                            iPhone 16 | نات اکتیو</span>
-                                                    </div>
-
-
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <span class="fw-bold text-success fs-5">101,400,000 تومان</span>
-                                                        <div class="d-flex align-items-center gap-1 text-primary">
-                                                            <box-icon name="truck" color="#0d6efd"></box-icon>
-                                                            <span>ارسال رایگان</span>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                        </ul>
-
-                                    </div>
-                                </div>
-                                <div class="items-shop mt-3 ">
-                                    <div class="row">
-                                        <ul style={{ listStyle: 'none' }}>
-
-
-                                            <div class="card shadow-sm rounded-4 border-0">
-                                                <div class="card-body p-3">
-
-
-                                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                                        <div class="d-flex align-items-center gap-2">
-
-                                                            <box-icon name="chevron-down"></box-icon>
-                                                            <div
-                                                                style={{ width: '1px', height: '24px', backgroundColor: '#dee2e6', margin: '0 10px' }} >
-                                                            </div>
-
-                                                            <img src="/img/digi.png" width="32" height="32"
-                                                                style={{ borderRadius: '50%' }} />
-                                                            <span style={{ fontSize: '18px' }} class="fw-semibold">دیجی
-                                                                کالا</span>
-                                                        </div>
-
-                                                        <button
-                                                            class="btn btn-sm btn-light border rounded-pill px-3 d-flex align-items-center gap-1">
-                                                            <box-icon name="dots-horizontal-rounded"></box-icon>
-                                                            <span>گزینه‌ها</span>
-                                                        </button>
-                                                    </div>
-
-                                                    <hr class="my-2" />
-
-
-                                                    <div class="mb-2">
-                                                        <span class="fw-medium">گوشی آیفون 16 حافظه 256 گیگ رم 8 گیگ |
-                                                            iPhone 16 | نات اکتیو</span>
-                                                    </div>
-
-
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <span class="fw-bold text-success fs-5">101,400,000 تومان</span>
-                                                        <div class="d-flex align-items-center gap-1 text-primary">
-                                                            <box-icon name="truck" color="#0d6efd"></box-icon>
-                                                            <span>ارسال رایگان</span>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-
-
-                                        </ul>
-
-                                    </div>
-                                </div>
                             </section>
                         </div>
                         <aside class="col-lg-3 position-relative">
