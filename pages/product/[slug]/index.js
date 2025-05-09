@@ -123,7 +123,7 @@ export default function ProductPage() {
 
                             </section>
                         </div>
-                        <AdsComponent />
+                        <AdsComponent img={'/img/ads3.png'} ></AdsComponent>
                     </div >
                 </div >
             </div>
@@ -141,7 +141,7 @@ export default function ProductPage() {
                         </section>
 
                     </div>
-                    <AdsComponent />
+                    <AdsComponent img={'/img/ads3.png'} />
                 </div >
             </div >
 

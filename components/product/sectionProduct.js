@@ -1,5 +1,7 @@
+import AdsComponent from "./ads"
 
-export default function SectionProduct() {
+
+export default function SectionProduct(pro) {
     return (
         <div class="container-custom">
             <div class="row">
@@ -95,11 +97,7 @@ export default function SectionProduct() {
 
 
                 </div>
-                <aside class="col-lg-3 position-relative">
-
-                    <img class="img-fluid rounded-2" src="/img/ads.png" alt="" />
-
-                </aside>
+                <AdsComponent />
             </div>
         </div >
     )
