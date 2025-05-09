@@ -1,7 +1,9 @@
+
 export default function SectionProduct() {
     return (
         <div class="container-custom">
             <div class="row">
+
                 <div class="col-lg-9">
                     <div class="product-main mt-3 mb-3">
                         <div class="container-custom">
@@ -71,27 +73,23 @@ export default function SectionProduct() {
                     </div>
 
                     <div class=" tabs" id="tabs">
-                        <div class="d-flex container-custom">
-                            <button
-                                style={{ border: 'none', backgroundColor: '#FFF' }}
-                                class="tab-button ms-5 pb-2"
-                                data-scroll="section1">فروشندگان</button>
-                            <button
-                                style={{ border: 'none', backgroundColor: '#FFF' }}
-                                class="tab-button ms-5 pb-2"
-                                data-scroll="section2">نظرات</button>
-                            <button
-                                style={{ border: 'none', backgroundColor: '#FFF' }}
-                                class="tab-button ms-5 pb-2"
-                                data-scroll="section3">سابقه قیمتی</button>
-                            <button
-                                style={{ border: 'none', backgroundColor: '#FFF' }}
-                                class="tab-button ms-5 pb-2"
-                                data-scroll="section4">مشخصات</button>
-                            <button
-                                style={{ border: 'none', backgroundColor: '#FFF' }}
-                                class="tab-button"
-                                data-scroll="section5">مشابه</button>
+                        <div className="d-flex container-custom">
+                            {[
+                                { id: 'section1', label: 'فروشندگان' },
+                                { id: 'section2', label: 'نظرات' },
+                                { id: 'section3', label: 'سابقه قیمتی' },
+                                { id: 'section4', label: 'مشخصات' },
+                                { id: 'section5', label: 'مشابه' },
+                            ].map((item, index) => (
+                                <button
+                                    key={index}
+                                    style={{ border: 'none', backgroundColor: '#FFF' }}
+                                    className={`tab-button ${index !== 4 ? 'ms-5 pb-2' : ''}`}
+                                    data-scroll={item.id}
+                                >
+                                    {item.label}
+                                </button>
+                            ))}
                         </div>
                     </div>
 
