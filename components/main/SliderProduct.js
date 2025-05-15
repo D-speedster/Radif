@@ -8,7 +8,7 @@ import Link from 'next/link'; // برای Next.js
 // use your own heart icon or install it with: npm install lucide-react
 // For now, I'll create a simple heart icon component
 const HeartIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg style={{ height: '18px', width: '18px', marginTop: '3.5px' }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
   </svg>
 );
@@ -96,10 +96,8 @@ const PopularProductsSlider = () => {
         <Swiper
           slidesPerView={1}
           spaceBetween={10}
-          pagination={{
-            el: '.swiper-pagination',
-            clickable: true,
-          }}
+
+          navigation={true}
           breakpoints={{
             640: {
               slidesPerView: 2,
@@ -119,7 +117,7 @@ const PopularProductsSlider = () => {
         >
           {products.map((product) => (
             <SwiperSlide key={product.id}>
-              <Link href={`/product/${product.title}`} style={{ textDecoration: 'none', color : '#000'}}>
+              <Link href={`/product/${product.title}`} style={{ textDecoration: 'none', color: '#000' }}>
                 <div className="item-product">
                   <div className="product-img">
                     <img src={product.image} className="img-fluid" alt={product.title} />
@@ -136,7 +134,7 @@ const PopularProductsSlider = () => {
                     <span>{product.title}</span>
                   </div>
                   <div className="price">
-                    <span>{product.price} </span> <span style={{ color: 'red' }}>تومان</span>
+                    <span>{product.price} </span> <span>تومان</span>
                   </div>
                   <div className="available">
                     <span>موجود در {product.stores} فروشگاه</span>

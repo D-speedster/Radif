@@ -121,7 +121,7 @@ main {
 
 .header-search {
     border-radius: 24px;
-    height: 490px;
+    height: 480px;
     width: 100%;
     background-color: #050217;
     position: relative;
@@ -184,10 +184,13 @@ main {
 
 .description {
     font-size: 20px;
-    font-weight: 300;
-    opacity: 0.85;
-    margin-bottom: 40px;
-    line-height: 1.8;
+    color: #fefefe;
+    font-weight: 500;
+    /* opacity: 0.85; */
+    margin-bottom: 20px;
+    line-height: 2em;
+    margin-top: 20px;
+    width: 75%;
 }
 
 .search-box {
@@ -277,11 +280,11 @@ main {
     white-space: nowrap;
     background-color: transparent;
     color: #0B051D;
-    font-weight: 700;
-    font-size: 1rem;
+    font-weight: 600;
+    font-size: 16px;
     -webkit-font-smoothing: antialiased;
-    box-shadow: 0 0 0 1px inset #C4C3CA;
-    border: 0.3px solid #CCC;
+    /* box-shadow: 0 0 0 1px inset #C4C3CA; */
+    border: 0.3px solid #766b6b;
     transition: all 0.2s ease;
 }
 
@@ -420,7 +423,8 @@ footer .enamad img {
 .header h2 {
     font-weight: bold;
     margin: 0;
-    font-size: 24px;
+    font-size: 1.15em;
+    font-weight: 800;
 }
 
 .header a {
@@ -537,8 +541,8 @@ footer .enamad img {
 }
 
 .price {
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: 800;
+    font-size: 15px;
     margin-bottom: 5px;
 }
 
@@ -600,7 +604,7 @@ footer .enamad img {
     background-color: #eeee;
     border-radius: 14px;
     margin: 0.5rem;
-    font-size: 15px;
+    font-size: 16x;
     padding: 15px 0px;
 }
 
@@ -640,8 +644,8 @@ footer .enamad img {
 }
 
 .item-product {
-    height: 340px ;
-   
+    height: 340px;
+
 }
 
 .product-img {
@@ -704,12 +708,13 @@ footer .enamad img {
 
 .title-card {
     height: 50px;
+    margin-top: 4px;
 }
 
 .title-card span {
-    font-family: var(--font-weight-regular);
-    font-weight: 700;
-    font-size: 14px;
+    font-family: 'IRANYEKAN' !important;
+    font-weight: 600;
+    font-size: 13.5px;
 
 }
 
@@ -762,7 +767,9 @@ footer .enamad img {
     font-size: 14.5px;
     font-family: var(--font-weight-light);
     text-align: center;
-    height: 40px !important;
+    height: 50px !important;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 .Knowledge .card {
@@ -841,10 +848,10 @@ footer .enamad img {
 }
 
 .title-About {
-    font-family: var(--font-weight-bold);
-    font-weight: 600;
+
     margin: 5px 0px;
 }
+
 
 .text-about {
     height: auto;
@@ -854,10 +861,11 @@ footer .enamad img {
 
 
 .About h6 {
-    font-size: 19px;
-    font-weight: 600;
+    font-size: 17px;
+    font-weight: 800;
     font-family: var(--font-weight-thin);
     color: black;
+    OPACITY: 0.5;
 }
 
 .About h3 {
@@ -946,7 +954,6 @@ footer .enamad img {
 
 .ads {
     width: 100%;
-    background-color: #dddce1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1245,4 +1252,49 @@ footer .enamad img {
     /* کمی فضا در پایین */
     transition: top 0.3s ease-in-out;
     /* انیمیشن آرام برای چسبیدن به بالا */
+}
+
+.header-item {
+    font-family: 'IRANYEKAN';
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 40px !important;
+    height: 40px !important;
+    background-color: white;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 10;
+    margin-top: -75px !important;
+}
+
+/* فلش داخل دکمه (کوچک‌تر کردن آیکون) */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 16px !important;
+    color: black;
+}
+
+/* فاصله از کناره‌ها */
+.swiper-button-next {
+    right: 15px;
+}
+
+.swiper-button-prev {
+    left: 15px;
+}
+
+/* هاور افکت */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
 }

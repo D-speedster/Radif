@@ -63,10 +63,13 @@ export default function SellersComponent(props) {
 
                             </ul>
 
-                        </div >
+                        </div>
+
                     </div >
+
                 })
             }
+            <button className="btn btn-danger d-flex  mx-auto text-center">نمایش تمام فروشندگان</button>
 
         </>
     )

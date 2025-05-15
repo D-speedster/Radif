@@ -5,7 +5,12 @@ function AboutComponent() {
                 <h6>درباره ردیف</h6>
                 <div class="row-cols-2">
                     <div class="col">
-                        <h3>هدف ما خلق یک سرویس و تجربه‌ی فوق‌العاده برای همه‌ی مصرف‌کنندگان است. </h3>
+                        <h3 style={{
+                            fontWeight: '800',
+                            fontSize: '25px',
+                            fontFamily: 'IRANYEKAN'
+                        }}
+                        >هدف ما خلق یک سرویس و تجربه‌ی فوق‌العاده برای همه‌ی مصرف‌کنندگان است. </h3>
 
                     </div>
                 </div>
@@ -14,8 +19,8 @@ function AboutComponent() {
                         <div class="About-Item">
                             <div class="icon-About">
                                 <div>
-                                    <img style={{width : '50px', height : '50px'}} src="/img/search-product-icon.svg"
-                                        alt=""/>
+                                    <img style={{ width: '50px', height: '50px' }} src="/img/search-product-icon.svg"
+                                        alt="" />
                                 </div>
                             </div>
                             <div class="title-About">
@@ -30,8 +35,8 @@ function AboutComponent() {
                     <div class="col">
                         <div class="About-Item">
                             <div class="icon-About">
-                                <img style={{width : '50px', height : '50px'}} src="/img/shield-checkmark-line-icon.svg"
-                                    alt=""/>
+                                <img style={{ width: '50px', height: '50px' }} src="/img/shield-checkmark-line-icon.svg"
+                                    alt="" />
                             </div>
                             <div class="title-About">
                                 <strong>مستقل و قابل اعتماد</strong>
@@ -47,7 +52,7 @@ function AboutComponent() {
                     <div class="col">
                         <div class="About-Item">
                             <div class="icon-About">
-                                <img style={{width : '50px', height : '50px'}} src="/img/free-tag-line-icon.svg" alt=""/>
+                                <img style={{ width: '50px', height: '50px' }} src="/img/free-tag-line-icon.svg" alt="" />
                             </div>
                             <div class="title-About">
                                 <strong>استفاده رایگان</strong>

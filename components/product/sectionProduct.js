@@ -1,104 +1,110 @@
+'use client'
+
+import { useState } from "react"
+import { BsStarFill, BsBellFill } from "react-icons/bs"
+import { BiGitCompare } from "react-icons/bi"
 import AdsComponent from "./ads"
 
+export default function SectionProduct() {
+  const [mainImage, setMainImage] = useState('/img/iphone16.png')
 
-export default function SectionProduct(pro) {
-    return (
-        <div class="container-custom">
-            <div class="row">
+  const galleryImages = [
+    "/img/iphone16.png",
+    "/img/gallery/2.webp",
+    "/img/gallery/3.webp",
+    "/img/gallery/4.webp",
+  ]
 
-                <div class="col-lg-9">
-                    <div class="product-main mt-3 mb-3">
-                        <div class="container-custom">
-                            <div class="row">
-                                <div class="col-lg-1 d-lg-block d-none">
-                                    <img src="/img/iphone16.png" class="gallery-thumb" />
-                                    <img src="/img/gallery/2.webp" class="gallery-thumb" />
-                                    <img src="/img/gallery/3.webp" class="gallery-thumb" />
-                                    <img src="/img/gallery/4.webp" class="gallery-thumb" />
-                                </div>
-                                <div class="col-lg-11">
-                                    <div class="row">
-                                        <div class="col-12 col-lg-4 mx-auto">
-                                            <div class="main-pic">
-                                                <img src="/img/iphone16.png" class="mainpic" alt="iPhone 16" />
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-8">
-                                            <div class="product-detail container-custom">
-                                                <span class="product-title">
-                                                    گوشی موبایل اپل مدل iPhone 16 CH دو سیم کارت ظرفیت 128 گیگابایت و رم
-                                                    8 گیگابایت
-                                                </span>
-                                                <div class="Ability mt-4">
-                                                    <div
-                                                        class="d-flex align-items-center text-secondary fs-6 modern-badges">
-                                                        <div class="d-flex align-items-center gap-1">
-                                                            <box-icon name='star' type='solid' color='#f9d635'
-                                                                size="sm"></box-icon>
-                                                            <span class="fw-bold text-dark">4.6</span>
-                                                        </div>
-
-                                                        <div class="separator"></div>
-
-                                                        <div class="d-flex align-items-center gap-1 hoverable">
-                                                            <box-icon name='bell' size="sm" color="#6c757d"></box-icon>
-                                                            <span>هشدار قیمتی</span>
-                                                        </div>
-
-                                                        <div class="separator"></div>
-
-                                                        <div class="d-flex align-items-center gap-1 hoverable">
-                                                            <box-icon name='git-compare' size="sm"
-                                                                color="#6c757d"></box-icon>
-                                                            <span>مقایسه</span>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <p class="mt-3">
-                                                        گوشی موبایل اپل مدل iPhone 16، به عنوان یکی از جدیدترین مدل‌های
-                                                        این برند معتبر...
-                                                    </p>
-                                                    <span class="cheapest-price">
-                                                        شروع قیمت از <span>۱۵,۹۰۰,۰۰۰</span> تومان
-                                                    </span>
-                                                    <br />
-                                                    <button class="btn btn-outline-dark mt-3">حافظه 256 گیگ</button>
-                                                    <button class="btn btn-outline-dark mt-3">حافظه 128 گیگ</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class=" tabs" id="tabs">
-                        <div className="d-flex container-custom">
-                            {[
-                                { id: 'section1', label: 'فروشندگان' },
-                                { id: 'section2', label: 'نظرات' },
-                                { id: 'section3', label: 'سابقه قیمتی' },
-                                { id: 'section4', label: 'مشخصات' },
-                                { id: 'section5', label: 'مشابه' },
-                            ].map((item, index) => (
-                                <button
-                                    key={index}
-                                    style={{ border: 'none', backgroundColor: '#FFF' }}
-                                    className={`tab-button ${index !== 4 ? 'ms-5 pb-2' : ''}`}
-                                    data-scroll={item.id}
-                                >
-                                    {item.label}
-                                </button>
-                            ))}
-                        </div>
-                    </div>
-
-
+  return (
+    <div className="container-custom">
+      <div className="row">
+        <div className="col-lg-9">
+          <div className="product-main mt-3 mb-3">
+            <div className="container-custom">
+              <div className="row">
+                <div className="col-lg-1 d-lg-block d-none">
+                  {galleryImages.map((img, index) => (
+                    <img
+                      key={index}
+                      src={img}
+                      className="gallery-thumb"
+                      onClick={() => setMainImage(img)}
+                      style={{ cursor: 'pointer' }}
+                    />
+                  ))}
                 </div>
-                <AdsComponent />
+                <div className="col-lg-11">
+                  <div className="row">
+                    <div className="col-12 col-lg-4 mx-auto">
+                      <div className="main-pic">
+                        <img src={mainImage} className="mainpic" alt="iPhone 16" />
+                      </div>
+                    </div>
+                    <div className="col-12 col-lg-8">
+                      <div className="product-detail container-custom">
+                        <span className="product-title">
+                          گوشی موبایل اپل مدل iPhone 16 CH دو سیم کارت ظرفیت 128 گیگابایت و رم 8 گیگابایت
+                        </span>
+                        <div className="Ability mt-4">
+                          <div className="d-flex align-items-center text-secondary fs-6 modern-badges">
+                            <div className="d-flex align-items-center gap-1">
+                              <BsStarFill color="#f9d635" size={16} />
+                              <span className="fw-bold text-dark">4.6</span>
+                            </div>
+                            <div className="separator"></div>
+                            <div className="d-flex align-items-center gap-1 hoverable">
+                              <BsBellFill size={16} color="#6c757d" />
+                              <span>هشدار قیمتی</span>
+                            </div>
+                            <div className="separator"></div>
+                            <div className="d-flex align-items-center gap-1 hoverable">
+                              <BiGitCompare size={16} color="#6c757d" />
+                              <span>مقایسه</span>
+                            </div>
+                          </div>
+
+                          <p className="mt-3">
+                            گوشی موبایل اپل مدل iPhone 16، به عنوان یکی از جدیدترین مدل‌های این برند معتبر...
+                          </p>
+                          <span className="cheapest-price">
+                            شروع قیمت از <span>۱۵,۹۰۰,۰۰۰</span> تومان
+                          </span>
+                          <br />
+                          <button className="btn btn-outline-dark mt-3">حافظه 256 گیگ</button>
+                          <button className="btn btn-outline-dark mt-3">حافظه 128 گیگ</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div >
-    )
+          </div>
+
+          <div className="tabs" id="tabs">
+            <div className="d-flex container-custom">
+              {[
+                { id: 'section1', label: 'فروشندگان' },
+                { id: 'section2', label: 'نظرات' },
+                { id: 'section3', label: 'سابقه قیمتی' },
+                { id: 'section4', label: 'مشخصات' },
+                { id: 'section5', label: 'مشابه' },
+              ].map((item, index) => (
+                <button
+                  key={index}
+                  style={{ border: 'none', backgroundColor: '#FFF' }}
+                  className={`tab-button ${index !== 4 ? 'ms-5 pb-2' : ''}`}
+                  data-scroll={item.id}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <AdsComponent img={'/img/ads.png'} />
+      </div>
+    </div>
+  )
 }
