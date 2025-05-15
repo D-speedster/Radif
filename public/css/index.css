@@ -43,10 +43,8 @@
 }
 
 :root {
-    /* خانواده فونت اصلی */
-    --font-family-primary: 'IRANYEKAN', sans-serif;
 
-    /* وزن‌های متعارف */
+    --font-family-primary: 'IRANYEKAN', sans-serif;
     --font-weight-thin: 100;
     --font-weight-light: 300;
     --font-weight-regular: 400;
@@ -70,7 +68,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* اضافه کردن این بخش برای اصلی صفحه */
+
 main {
     flex: 1 0 auto;
 }
@@ -186,7 +184,7 @@ main {
     font-size: 20px;
     color: #fefefe;
     font-weight: 500;
-    /* opacity: 0.85; */
+
     margin-bottom: 20px;
     line-height: 2em;
     margin-top: 20px;
@@ -283,7 +281,7 @@ main {
     font-weight: 600;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
-    /* box-shadow: 0 0 0 1px inset #C4C3CA; */
+
     border: 0.3px solid #766b6b;
     transition: all 0.2s ease;
 }
@@ -293,7 +291,6 @@ main {
     box-shadow: 0 0 0 1px inset #B0AFB6;
 }
 
-/* استایل جدید برای فوتر */
 footer {
     background: #E4F8F9;
     background: linear-gradient(297deg, rgba(228, 248, 249, 1) 32%, rgba(254, 247, 229, 1) 97%);
@@ -306,19 +303,18 @@ footer {
 
 footer p {
     color: #000;
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 500;
     margin-top: 3px;
-    font-family: var(--font-weight-medium);
-    line-height: 1.4;
+    line-height: 1.8em;
 }
 
 footer .enamad img {
-    width: 70px;
-    height: 75px;
+    width: 80px;
+    height: 80px;
     margin-top: 15px;
     object-fit: cover;
-    aspect-ratio: 3/4;
+    aspect-ratio: 1/4;
     mix-blend-mode: darken;
 }
 
@@ -334,11 +330,11 @@ footer .enamad img {
 
 .list-footer a {
     text-decoration: none;
-    color: #444343;
-    padding: 8px 0;
-    font-family: var(--font-weight-thin);
+    color: #2c2b2b;
+    padding: 11px 0;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 16px;
+
 }
 
 .copyright {
@@ -350,8 +346,9 @@ footer .enamad img {
     background: #639EFA;
     background: linear-gradient(297deg, rgba(99, 158, 250, 1) 5%, rgba(20, 86, 222, 1) 55%);
     text-align: center;
-    font-weight: 400;
-    font-family: var(--font-weight-thin);
+    font-family: 'IRANYEKAN';
+    font-weight: 600;
+    font-size: 16px;
     color: #ddd;
 }
 
@@ -359,7 +356,6 @@ footer .enamad img {
     padding-bottom: 0 !important;
 }
 
-/* حذف مارجین و پدینگ اضافی */
 .footer p:last-child {
     margin-bottom: 0;
 }
@@ -595,7 +591,7 @@ footer .enamad img {
 
 .category {}
 
-.icons-category {
+/* .icons-category {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -606,10 +602,31 @@ footer .enamad img {
     margin: 0.5rem;
     font-size: 16x;
     padding: 15px 0px;
+} */
+.category-icons-wrapper {
+    max-width: 100%;
+    padding: 16px;
+}
+
+.icons-category {
+    width: calc(100% / 12 - 1rem);
+    min-width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    background-color: #eeee;
+    border-radius: 14px;
 }
 
 .icons-category span {
     font-weight: 600;
+}
+
+@media (max-width: 576px) {
+    .icons-category {
+        width: calc(100% / 3 - 1rem);
+    }
 }
 
 .icons-category div {
@@ -785,11 +802,11 @@ footer .enamad img {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    /* فاصله کوچیک بین آیکون و متن */
+
     font-size: 0.85rem;
-    /* سایز متن دلخواه */
+
     color: #555;
-    /* رنگ ملایم‌تر */
+
 }
 
 .section-title {
@@ -848,16 +865,30 @@ footer .enamad img {
 }
 
 .title-About {
-
     margin: 5px 0px;
+}
+
+.title-About strong {
+    font-size: 16px;
+    font-weight: 800;
 }
 
 
 .text-about {
+    margin-top: 9px;
     height: auto;
     width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 2em;
 }
 
+.footer-img p {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.8em;
+    opacity: 0.9;
+}
 
 
 .About h6 {
@@ -875,7 +906,7 @@ footer .enamad img {
     margin-bottom: 30px;
 }
 
-/* استایل‌های قبلی شما */
+
 .main-pic {
     background-color: #f7f7f9;
     border-radius: 14px;
@@ -933,23 +964,23 @@ footer .enamad img {
     color: green;
 }
 
-/* استایل جدید برای سکشن تمام عرض */
+
 .full-width-section {
     width: 100%;
     background-color: #f1f1f1;
-    /* رنگ پس زمینه تعیین شده */
+
     padding: 30px 0;
     margin-top: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* تغییر استایل price-shops */
+
 .price-shops {
     height: max-content;
     background-color: transparent;
-    /* حذف رنگ پس‌زمینه چون روی والد اعمال شده */
+
     margin-top: 0;
-    /* حذف مارجین چون روی والد اعمال شده */
+
 }
 
 .ads {
@@ -961,10 +992,10 @@ footer .enamad img {
     border-radius: 14px;
 }
 
-/* در سکشن تمام عرض، تغییر استایل ads برای هماهنگی بیشتر */
+
 .full-width-section .ads {
     background-color: #ffffff;
-    /* رنگ پس‌زمینه متفاوت برای تمایز */
+
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -1229,13 +1260,13 @@ footer .enamad img {
 
 .tabs {
     transition: top 0.3s ease-in-out;
-    /* انیمیشن برای حرکت به سمت بالا */
+
     width: 100%;
-    /* عرض 100% برای تب‌ها */
+
     background-color: white;
-    /* پس‌زمینه سفید */
+
     box-shadow: none;
-    /* سایه اولیه */
+
 }
 
 .tabs.fixed {
@@ -1244,14 +1275,13 @@ footer .enamad img {
     left: 0;
     right: 0;
     z-index: 1000;
-    /* قرار دادن تب‌ها در بالای سایر محتواها */
 
     padding-top: 10px;
-    /* کمی فضا در بالا */
+
     padding-bottom: 10px;
-    /* کمی فضا در پایین */
+
     transition: top 0.3s ease-in-out;
-    /* انیمیشن آرام برای چسبیدن به بالا */
+
 }
 
 .header-item {
@@ -1276,14 +1306,14 @@ footer .enamad img {
     margin-top: -75px !important;
 }
 
-/* فلش داخل دکمه (کوچک‌تر کردن آیکون) */
+
 .swiper-button-next::after,
 .swiper-button-prev::after {
     font-size: 16px !important;
     color: black;
 }
 
-/* فاصله از کناره‌ها */
+
 .swiper-button-next {
     right: 15px;
 }
@@ -1292,7 +1322,7 @@ footer .enamad img {
     left: 15px;
 }
 
-/* هاور افکت */
+
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
     background-color: #f0f0f0;

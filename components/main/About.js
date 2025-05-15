@@ -1,3 +1,8 @@
+import { RiFindReplaceLine } from "react-icons/ri";
+import { TiTick } from "react-icons/ti";
+import { BiExpandAlt } from "react-icons/bi";
+
+
 function AboutComponent() {
     return (
         <section class="About mb-5">
@@ -18,9 +23,9 @@ function AboutComponent() {
                     <div class="col">
                         <div class="About-Item">
                             <div class="icon-About">
-                                <div>
-                                    <img style={{ width: '50px', height: '50px' }} src="/img/search-product-icon.svg"
-                                        alt="" />
+                                <div className="me-5 mb-3">
+                                    <RiFindReplaceLine style={{ fontSize: '54px' }} />
+
                                 </div>
                             </div>
                             <div class="title-About">
@@ -35,8 +40,11 @@ function AboutComponent() {
                     <div class="col">
                         <div class="About-Item">
                             <div class="icon-About">
-                                <img style={{ width: '50px', height: '50px' }} src="/img/shield-checkmark-line-icon.svg"
-                                    alt="" />
+                                <div className="me-5 mb-3">
+                                    <TiTick style={{ fontSize: '54px' }} />
+                                </div>
+
+
                             </div>
                             <div class="title-About">
                                 <strong>مستقل و قابل اعتماد</strong>
@@ -52,7 +60,10 @@ function AboutComponent() {
                     <div class="col">
                         <div class="About-Item">
                             <div class="icon-About">
-                                <img style={{ width: '50px', height: '50px' }} src="/img/free-tag-line-icon.svg" alt="" />
+                                <div className="me-5 mb-3">
+                                    <BiExpandAlt style={{fontSize : '54px'}} />
+
+                                </div>
                             </div>
                             <div class="title-About">
                                 <strong>استفاده رایگان</strong>
