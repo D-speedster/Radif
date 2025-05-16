@@ -9,7 +9,7 @@ function Knowledge(prop) {
                 <div className="title">
 
                     <LuNewspaper fontSize={'24px'} />
-                    <span style={{ fontSize: '18px' , marginRight : '8px' , fontWeight : '700' , marginTop : '2px'}}>خبر روز </span>
+                    <span style={{ fontSize: '19px' , marginRight : '8px' , fontWeight : '800' , marginTop : '3px'}}>خبر روز </span>
                 </div>
                 <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 row-cols-sm-2 ">
                     {Object.entries(prop).map(([key, item]) => (

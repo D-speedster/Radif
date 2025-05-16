@@ -370,12 +370,11 @@ footer .enamad img {
 
 .topic {
     background: linear-gradient(135deg, #f9f7ff, #e6e1ff);
-
     height: max-content;
     padding: 2rem 0;
     width: 100%;
-    margin-bottom: 50px;
-    margin-top: 100px;
+    margin-bottom: 35px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -545,10 +544,11 @@ footer .enamad img {
 }
 
 .product-title {
-    font-size: 14px;
+    font-family: 'IRANYEKAN';
+    font-size: 17px;
     margin-bottom: 8px;
-    font-weight: 600;
-    line-height: 1.4;
+    font-weight: 700;
+    line-height: 1.8em;
     height: 40px;
     overflow: hidden;
 }
@@ -988,9 +988,7 @@ footer .enamad img {
 
 .product-detail {}
 
-.product-title {
-    font-weight: 800;
-}
+
 
 .breadcrumb-li a,
 .breadcrumb-li {
