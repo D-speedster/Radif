@@ -91,28 +91,28 @@ export default function ProductPage() {
             <Header_Main />
             <Breadcrumb />
             <SectionProduct />
-            <div class="full-width-section">
-                <div class="container-custom">
-                    <div class="row">
-                        <div class="col-lg-9">
-                            <section id="section1" class="price-shops">
-                                <div class="filter-product">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="d-flex align-items-center gap-2">
+            <div className="full-width-section">
+                <div className="container-custom">
+                    <div className="row">
+                        <div className="col-lg-9">
+                            <section id="section1" className="price-shops">
+                                <div className="filter-product">
+                                    <div className="d-flex justify-content-between align-items-center">
+                                        <div className="d-flex align-items-center gap-2">
                                             <button
                                                 style={{ backgroundColor: '#FFF' }}
-                                                class="btn rounded-3">فروشندگان</button>
+                                                className="btn rounded-3">فروشندگان</button>
                                             <button style={{ backgroundColor: '#FFF' }}
-                                                class="btn btn-light rounded-3">نظرات</button>
+                                                className="btn btn-light rounded-3">نظرات</button>
                                             <button style={{ backgroundColor: '#FFF' }}
-                                                class="btn btn-light rounded-3">مشخصات</button>
+                                                className="btn btn-light rounded-3">مشخصات</button>
                                             <button style={{ backgroundColor: '#FFF' }}
-                                                class="btn btn-light rounded-3">توضیحات</button>
+                                                className="btn btn-light rounded-3">توضیحات</button>
 
                                         </div>
                                         <div>
                                             <button style={{ backgroundColor: '#FFF' }}
-                                                class="btn btn-light rounded-4">پیشنهاد</button>
+                                                className="btn btn-light rounded-4">پیشنهاد</button>
                                         </div>
 
 
@@ -127,7 +127,7 @@ export default function ProductPage() {
                     </div >
                 </div >
             </div>
-            <div class="container-custom">
+            <div className="container-custom">
                 <div className='row'>
                     <div className='col-lg-9'>
                         <ReviewsComponent
@@ -136,7 +136,7 @@ export default function ProductPage() {
                         <PriceHistory />
                         <FeaturesComponent />
 
-                        <section id="section5" class="Similar-products">
+                        <section id="section5" className="Similar-products">
                             <SliderProduct></SliderProduct>
                         </section>
 

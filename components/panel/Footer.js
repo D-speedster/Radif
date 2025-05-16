@@ -1,9 +1,9 @@
 export default function () {
     return (
-        <div class="main-footer text-center">
-            <div class="container">
-                <div class="row row-sm">
-                    <div class="col-md-12">
+        <div className="main-footer text-center">
+            <div className="container">
+                <div className="row row-sm">
+                    <div className="col-md-12">
                         <span>کپی رایت © 1403  . طراحی شده توسط <a href="#">Themefix</a> کلیه حقوق محفوظ است.</span>
                     </div>
                 </div>

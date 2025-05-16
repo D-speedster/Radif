@@ -3,15 +3,15 @@ import { LuNewspaper } from "react-icons/lu";
 function Knowledge(prop) {
 
     return (
-        <section class="Knowledge" style={{ background: '#FFF !important' }}>
-            <div class="container-custom">
+        <section className="Knowledge" style={{ background: '#FFF !important' }}>
+            <div className="container-custom">
 
                 <div className="title">
 
                     <LuNewspaper fontSize={'24px'} />
                     <span style={{ fontSize: '19px' , marginRight : '8px' , fontWeight : '800' , marginTop : '3px'}}>خبر روز </span>
                 </div>
-                <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 row-cols-sm-2 ">
+                <div className="row row-cols-1 row-cols-lg-4 row-cols-md-2 row-cols-sm-2 ">
                     {Object.entries(prop).map(([key, item]) => (
 
                         <div className="col mt-4" key={key}>

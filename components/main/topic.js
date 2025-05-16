@@ -1,11 +1,11 @@
 export default function Topic() {
     return (
-        <section class="topic">
-            <div class="container-custom">
-                <div class="row ">
-                    <div class="col">
-                        <div class="topic-info">
-                            <div class="topic-information">
+        <section className="topic">
+            <div className="container-custom">
+                <div className="row ">
+                    <div className="col">
+                        <div className="topic-info">
+                            <div className="topic-information">
                                 <h3>
                                     ردیف، میزبان همه برندهای محبوب تو!
                                 </h3>
@@ -21,8 +21,8 @@ export default function Topic() {
                         </div>
 
                     </div>
-                    <div class="col">
-                        <img class="" src="/img/top-mobile-phone-brand-1.jpg" alt="" />
+                    <div className="col">
+                        <img className="" src="/img/top-mobile-phone-brand-1.jpg" alt="" />
                     </div>
                 </div>
             </div>
