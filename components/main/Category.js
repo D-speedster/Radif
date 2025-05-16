@@ -1,3 +1,16 @@
+import { FiHome } from "react-icons/fi";
+import { HiDevicePhoneMobile } from "react-icons/hi2";
+import { MdOutlineCameraAlt } from "react-icons/md";
+import { MdSportsVolleyball } from "react-icons/md";
+import { IoCarSportOutline } from "react-icons/io5";
+import { GrGamepad } from "react-icons/gr";
+import { VscTools } from "react-icons/vsc";
+import { BsFillHeartPulseFill } from "react-icons/bs";
+import { FaBookOpen } from "react-icons/fa6";
+import { FaWifi } from "react-icons/fa";
+import { SiCoffeescript } from "react-icons/si";
+import { SlBasketLoaded } from "react-icons/sl";
+
 export default function Category() {
     return (
         <div className="category mt-3 mb-3">
@@ -5,26 +18,27 @@ export default function Category() {
                 <div className="d-flex flex-wrap justify-content-center gap-3 category-icons-wrapper">
                     <div className="icons-category">
                         <div>
-                            <box-icon name='home-alt-2'></box-icon>
+                            <FiHome fontSize={'24px'} className="mb-2" />
+
                         </div>
                         <span>لوازم منزل</span>
                     </div>
                     <div className="icons-category">
                         <div>
-                            <box-icon name='mobile-alt'></box-icon>
+                            <HiDevicePhoneMobile fontSize={'24px'} className="mb-2" />
                         </div>
                         <span>موبایل</span>
                     </div>
                     <div className="icons-category">
                         <div>
-                            <box-icon name='camera'></box-icon>
+                            <MdOutlineCameraAlt fontSize={'24px'} className="mb-2" />
                         </div>
                         <span>دوربین</span>
 
                     </div>
                     <div className="icons-category">
                         <div>
-                            <box-icon name='football'></box-icon>
+                            <MdSportsVolleyball fontSize={'24px'} className="mb-2" />
                         </div>
 
                         <span>ورزشی</span>
@@ -32,7 +46,7 @@ export default function Category() {
                     </div>
                     <div className="icons-category">
                         <div>
-                            <box-icon name='joystick-alt'></box-icon>
+                            <GrGamepad fontSize={'22px'} className="mb-2" />
                         </div>
 
                         <span>گیمینگ</span>
@@ -40,7 +54,7 @@ export default function Category() {
                     </div>
                     <div className="icons-category">
                         <div>
-                            <box-icon name='wrench'></box-icon>
+                            <VscTools fontSize={'24px'} className="mb-2" />
                         </div>
 
                         <span>ابزار</span>
@@ -48,22 +62,22 @@ export default function Category() {
                     </div>
                     <div className="icons-category">
                         <div>
-                            <box-icon name='home-alt-2'></box-icon>
+                            <IoCarSportOutline fontSize={'24px'} className="mb-2" />
                         </div>
 
-                        <span>منزل</span>
+                        <span>لوازم خودرو</span>
 
                     </div>
                     <div className="icons-category">
                         <div>
-                            <box-icon name='pulse'></box-icon>
+                            <BsFillHeartPulseFill fontSize={'24px'} className="mb-2" />
                         </div>
                         <span>بهداشتی</span>
 
                     </div>
                     <div className="icons-category">
                         <div>
-                            <box-icon name='book-alt'></box-icon>
+                            <FaBookOpen fontSize={'24px'} className="mb-2" />
                         </div>
 
                         <span>کتاب</span>
@@ -71,21 +85,21 @@ export default function Category() {
                     </div>
                     <div className="icons-category">
                         <div>
-                            <box-icon name='wifi'></box-icon>
+                            <FaWifi fontSize={'24px'} className="mb-2" />
                         </div>
                         <span>شبکه</span>
 
                     </div>
                     <div className="icons-category">
                         <div>
-                            <box-icon name='beer'></box-icon>
+                            <SiCoffeescript fontSize={'24px'} className="mb-2" />
                         </div>
                         <span>کافی </span>
 
                     </div>
                     <div className="icons-category">
                         <div>
-                            <box-icon name='cookie'></box-icon>
+                            <SlBasketLoaded fontSize={'24px'} className="mb-2" />
                         </div>
 
                         <span>سوپرمارکتی</span>
