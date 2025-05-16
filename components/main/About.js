@@ -8,7 +8,7 @@ function AboutComponent() {
         <section class="About mb-5">
             <div class="container-custom">
                 <h6>درباره ردیف</h6>
-                <div class="row-cols-2">
+                <div class="row-cols-lg-2">
                     <div class="col">
                         <h3 style={{
                             fontWeight: '800',
@@ -19,7 +19,7 @@ function AboutComponent() {
 
                     </div>
                 </div>
-                <div class="row row-cols-lg-3 row-cols-md-3 row-cols-1">
+                <div class="row row-cols-lg-3 row-cols-md-3 row-cols-1 parent-About">
                     <div class="col">
                         <div class="About-Item">
                             <div class="icon-About">

@@ -164,6 +164,7 @@ export default function HomePage() {
       <SliderProduct></SliderProduct>
       <Topic></Topic>
       <Knowledge {...newsAray}></Knowledge>
+      <SliderProduct></SliderProduct>
       <AboutComponent></AboutComponent>
       <FooterMain></FooterMain>
 

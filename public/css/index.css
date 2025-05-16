@@ -369,7 +369,8 @@ footer .enamad img {
 
 
 .topic {
-    background: #f3f3f5;
+    background: linear-gradient(135deg, #f9f7ff, #e6e1ff);
+
     height: max-content;
     padding: 2rem 0;
     width: 100%;
@@ -389,6 +390,14 @@ footer .enamad img {
     border-radius: 14px;
 }
 
+@media only screen and (max-width : 500px) {
+    .topic img {
+        width: 400px !important;
+        height: 240px;
+        border-radius: 14px;
+    }
+}
+
 
 .topic-information {
     display: flex;
@@ -396,6 +405,30 @@ footer .enamad img {
     padding-top: 160px;
     width: 75%;
     text-align: center;
+    font-family: 'IRANYEKAN';
+
+}
+
+.topic-information h3 {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.topic-information p {
+    line-height: 2.3em;
+    font-weight: 700;
+    font-size: 16px;
+    /* opacity: 0.7; */
+}
+
+@media only screen and (max-width : 500px) {
+    .topic-information p {
+        margin-left: -100px;
+    }
+
+    .topic-information h3 {
+        margin-left: -100px;
+    }
 
 }
 
@@ -690,6 +723,24 @@ footer .enamad img {
 
 
 }
+
+@media only screen and (max-width : 500px) {
+    .parent-About {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width : 500px) {
+    .icon-About div {
+        margin: 0 !important;
+
+    }
+
+}
+
 
 .img-info {
     font-family: 'IRANYEKAN';
