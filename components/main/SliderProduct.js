@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
 import Link from 'next/link';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { FaRegHeart } from "react-icons/fa";
 
-const PopularProductsSlider = () => {
+const SliderProduct = (prop) => {
+  console.log(prop.Category
+  )
   const products = [
     {
       id: 1,
@@ -85,8 +87,8 @@ const PopularProductsSlider = () => {
         <Swiper
           slidesPerView={1}
           spaceBetween={10}
-
           navigation={true}
+
           breakpoints={{
             640: {
               slidesPerView: 2,
@@ -101,7 +103,7 @@ const PopularProductsSlider = () => {
               spaceBetween: 7,
             },
           }}
-          modules={[Pagination]}
+          modules={[Pagination, Navigation]}
           className="mySwiper"
         >
           {products.map((product) => (
@@ -115,7 +117,7 @@ const PopularProductsSlider = () => {
                     </div>
                     <div className="img-like">
                       <span>
-                        <FaRegHeart fontSize={'20px'} className='pt-1'/>
+                        <FaRegHeart fontSize={'20px'} className='pt-1' />
                       </span>
                     </div>
                   </div>
@@ -139,4 +141,4 @@ const PopularProductsSlider = () => {
   );
 };
 
-export default PopularProductsSlider;
+export default SliderProduct;
