@@ -1006,7 +1006,9 @@ footer .enamad img {
 }
 
 .cheapest-price {
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 17px;
+    font-family: "IRANYEKAN";
     margin-bottom: 20px;
 }
 

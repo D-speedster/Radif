@@ -45,7 +45,7 @@ export default function SectionProduct() {
                         <span className="product-title">
                           گوشی موبایل اپل مدل iPhone 16 CH دو سیم کارت ظرفیت 128 گیگابایت و رم 8 گیگابایت
                         </span>
-                        <div className="Ability mt-4">
+                        <div className="Ability mt-2">
                           <div className="d-flex align-items-center text-secondary fs-6 modern-badges">
                             <div className="d-flex align-items-center gap-1">
                               <BsStarFill color="#f9d635" size={16} />
@@ -63,15 +63,20 @@ export default function SectionProduct() {
                             </div>
                           </div>
 
-                          <p className="mt-3">
+                          <p className="mt-3"
+                            style={{ fontSize: '15px', color: 'black', fontWeight: '500' }}
+                          >
+
                             گوشی موبایل اپل مدل iPhone 16، به عنوان یکی از جدیدترین مدل‌های این برند معتبر...
                           </p>
-                          <span className="cheapest-price">
-                            شروع قیمت از <span>۱۵,۹۰۰,۰۰۰</span> تومان
-                          </span>
+
+
+                          <button className="btn btn-outline-dark mt-1">حافظه 256 گیگ</button>
+                          <button className="btn btn-outline-dark mt-1">حافظه 128 گیگ</button>
                           <br />
-                          <button className="btn btn-outline-dark mt-3">حافظه 256 گیگ</button>
-                          <button className="btn btn-outline-dark mt-3">حافظه 128 گیگ</button>
+                          <div className="cheapest-price mt-3 ">
+                            شروع قیمت از <span>۱۵,۹۰۰,۰۰۰</span> تومان
+                          </div>
                         </div>
                       </div>
                     </div>
