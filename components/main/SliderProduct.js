@@ -7,8 +7,7 @@ import 'swiper/css/pagination';
 import { FaRegHeart } from "react-icons/fa";
 
 const SliderProduct = (prop) => {
-  console.log(prop.Category
-  )
+  
   const products = [
     {
       id: 1,
@@ -30,7 +29,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 3,
-      image: "https://via.placeholder.com/150/3357FF/FFFFFF?text=Product+3",
+      image: "",
       title: "تلویزیون ال جی مدل 55 اینچ",
       price: "۳۵,۰۰۰,۰۰۰",
       views: "+700",
@@ -75,7 +74,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 8,
-      image: "https://via.placeholder.com/150/33FF8D/FFFFFF?text=Product+8",
+      image: "",
       title: "دوربین عکاسی کانن مدل EOS 250D",
       price: "۲۵,۰۰۰,۰۰۰",
       views: "+350",
@@ -129,7 +128,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 14,
-      image: "https://via.placeholder.com/150/3357FF/FFFFFF?text=Product+14",
+      image: "",
       title: "کارت گرافیک NVIDIA GeForce RTX 4070",
       price: "۴۰,۰۰۰,۰۰۰",
       views: "+600",
@@ -138,7 +137,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 15,
-      image: "https://via.placeholder.com/150/FFFF33/000000?text=Product+15",
+      image: "",
       title: "موس و کیبورد بی‌سیم لاجیتک",
       price: "۲,۵۰۰,۰۰۰",
       views: "+300",
@@ -147,7 +146,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 16,
-      image: "https://via.placeholder.com/150/FF33FF/FFFFFF?text=Product+16",
+      image: "",
       title: "هارد اکسترنال وسترن دیجیتال 2 ترابایت",
       price: "۳,۵۰۰,۰۰۰",
       views: "+550",
@@ -156,7 +155,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 17,
-      image: "https://via.placeholder.com/150/33FFFF/FFFFFF?text=Product+17",
+      image: "",
       title: "مودم روتر وای فای تندا",
       price: "۱,۰۰۰,۰۰۰",
       views: "+700",
@@ -165,7 +164,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 18,
-      image: "https://via.placeholder.com/150/8D33FF/FFFFFF?text=Product+18",
+      image: "",
       title: "پرینتر جوهرافشان اپسون",
       price: "۴,۰۰۰,۰۰۰",
       views: "+200",
@@ -201,7 +200,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 22,
-      image: "https://via.placeholder.com/150/D133FF/FFFFFF?text=Product+22",
+      image: "",
       title: "اتو بخار تفال",
       price: "۲,۰۰۰,۰۰۰",
       views: "+350",
@@ -264,7 +263,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 29,
-      image: "https://via.placeholder.com/150/8D33FF/FFFFFF?text=Product+29",
+      image: "",
       title: "عینک آفتابی ری بن",
       price: "۳,۰۰۰,۰۰۰",
       views: "+600",
@@ -273,7 +272,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 30,
-      image: "https://via.placeholder.com/150/33FF8D/FFFFFF?text=Product+30",
+      image: "",
       title: "کیف چرمی زنانه",
       price: "۲,۵۰۰,۰۰۰",
       views: "+450",
@@ -282,7 +281,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 31,
-      image: "https://via.placeholder.com/150/FF8D33/FFFFFF?text=Product+31",
+      image: "",
       title: "کمربند چرمی مردانه",
       price: "۵۰۰,۰۰۰",
       views: "+250",
@@ -291,7 +290,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 32,
-      image: "https://via.placeholder.com/150/33FFD1/FFFFFF?text=Product+32",
+      image: "",
       title: "کتاب رمان خارجی",
       price: "۳۰۰,۰۰۰",
       views: "+1000",
@@ -300,7 +299,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 33,
-      image: "https://via.placeholder.com/150/D133FF/FFFFFF?text=Product+33",
+      image: "",
       title: "کتاب آشپزی ایرانی",
       price: "۲۰۰,۰۰۰",
       views: "+700",
@@ -309,7 +308,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 34,
-      image: "https://via.placeholder.com/150/FF5733/FFFFFF?text=Product+34",
+      image: "",
       title: "مداد رنگی فابر کاستل",
       price: "۸۰۰,۰۰۰",
       views: "+300",
@@ -318,7 +317,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 35,
-      image: "https://via.placeholder.com/150/33FF57/FFFFFF?text=Product+35",
+      image: "",
       title: "دفترچه یادداشت فانتزی",
       price: "۵۰,۰۰۰",
       views: "+600",
@@ -327,7 +326,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 36,
-      image: "https://via.placeholder.com/150/3357FF/FFFFFF?text=Product+36",
+      image: "",
       title: "خودکار روان‌نویس یونی بال",
       price: "۳۰,۰۰۰",
       views: "+900",
@@ -336,7 +335,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 37,
-      image: "https://via.placeholder.com/150/FFFF33/000000?text=Product+37",
+      image: "",
       title: "ماشین اصلاح سر و صورت فیلیپس",
       price: "۴,۰۰۰,۰۰۰",
       views: "+400",
@@ -345,7 +344,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 38,
-      image: "https://via.placeholder.com/150/FF33FF/FFFFFF?text=Product+38",
+      image: "",
       title: "مسواک برقی اورال بی",
       price: "۱,۵۰۰,۰۰۰",
       views: "+300",
@@ -354,7 +353,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 39,
-      image: "https://via.placeholder.com/150/33FFFF/FFFFFF?text=Product+39",
+      image: "",
       title: "ترازوی دیجیتال شیائومی",
       price: "۷۰۰,۰۰۰",
       views: "+500",
@@ -363,7 +362,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 40,
-      image: "https://via.placeholder.com/150/8D33FF/FFFFFF?text=Product+40",
+      image: "",
       title: "فرش ماشینی 6 متری",
       price: "۱۲,۰۰۰,۰۰۰",
       views: "+200",
@@ -372,7 +371,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 41,
-      image: "https://via.placeholder.com/150/33FF8D/FFFFFF?text=Product+41",
+      image: "",
       title: "مبل راحتی 7 نفره",
       price: "۳۰,۰۰۰,۰۰۰",
       views: "+150",
@@ -381,7 +380,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 42,
-      image: "https://via.placeholder.com/150/FF8D33/FFFFFF?text=Product+42",
+      image: "",
       title: "لوستر مدرن پذیرایی",
       price: "۵,۰۰۰,۰۰۰",
       views: "+100",
@@ -390,7 +389,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 43,
-      image: "https://via.placeholder.com/150/33FFD1/FFFFFF?text=Product+43",
+      image: "",
       title: "پرده زبرا پذیرایی",
       price: "۲,۰۰۰,۰۰۰",
       views: "+120",
@@ -399,7 +398,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 44,
-      image: "https://via.placeholder.com/150/D133FF/FFFFFF?text=Product+44",
+      image: "",
       title: "سرویس قابلمه گرانیتی",
       price: "۳,۰۰۰,۰۰۰",
       views: "+250",
@@ -408,7 +407,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 45,
-      image: "https://via.placeholder.com/150/FF5733/FFFFFF?text=Product+45",
+      image: "",
       title: "سرویس کارد و چنگال",
       price: "۱,۰۰۰,۰۰۰",
       views: "+180",
@@ -417,7 +416,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 46,
-      image: "https://via.placeholder.com/150/33FF57/FFFFFF?text=Product+46",
+      image: "",
       title: "پتو گلبافت دو نفره",
       price: "۸۰۰,۰۰۰",
       views: "+300",
@@ -426,7 +425,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 47,
-      image: "https://via.placeholder.com/150/3357FF/FFFFFF?text=Product+47",
+      image: "",
       title: "حوله حمام نخی",
       price: "۱۵۰,۰۰۰",
       views: "+400",
@@ -435,7 +434,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 48,
-      image: "https://via.placeholder.com/150/FFFF33/000000?text=Product+48",
+      image: "",
       title: "ملحفه و روبالشی ترک",
       price: "۵۰۰,۰۰۰",
       views: "+250",
@@ -444,7 +443,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 49,
-      image: "https://via.placeholder.com/150/FF33FF/FFFFFF?text=Product+49",
+      image: "",
       title: "ماگ سرامیکی فانتزی",
       price: "۸۰,۰۰۰",
       views: "+700",
@@ -453,7 +452,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 50,
-      image: "https://via.placeholder.com/150/33FFFF/FFFFFF?text=Product+50",
+      image: "",
       title: "فنجان و نعلبکی چینی",
       price: "۳۰۰,۰۰۰",
       views: "+350",

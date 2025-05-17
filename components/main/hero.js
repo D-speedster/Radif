@@ -18,8 +18,8 @@ export default function HeroSection(params) {
                                     <input name="product" type="search" className="form-control" placeholder="امروز دنبال چی می‌گردی؟" />
                                     <button type="submit" className="search-button">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
-                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" className="feather feather-search" viewBox="0 0 24 24">
+                                            stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                                            strokeLinejoin="round" className="feather feather-search" viewBox="0 0 24 24">
                                             <circle cx="11" cy="11" r="8"></circle>
                                             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                                         </svg>
