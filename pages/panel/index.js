@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Switcher from "../../components/panel/switcher";
 
 export default function Home() {
   return (
@@ -34,7 +35,7 @@ export default function Home() {
         <link href="./assets/switcher/demo.css" rel="stylesheet" />
       </Head>
 
-      {/* بقیه محتویات صفحه اینجا */}
+      <Switcher></Switcher>
     </>
   );
 }
