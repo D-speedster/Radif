@@ -5,11 +5,8 @@ export default function Header_Main() {
     return (
 
         <header>
-            <nav className="navbar navbar-expand-lg ">
-                <div className="container-fluid"
-                    style={{ maxWidth: '1450.8px' }}
-                >
-
+            <nav className="container-custom navbar navbar-expand-lg pt-2  ">
+             
                     <Link className="" href="/">
                         <img src="/img/radif-logo.svg" alt="logo" className="ms-2 logos" />
                     </Link>
@@ -33,7 +30,7 @@ export default function Header_Main() {
                             <button className="sign-in-button">ورود</button>
                         </div>
                     </div>
-                </div>
+               
             </nav>
         </header >
     )
