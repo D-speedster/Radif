@@ -1,3 +1,4 @@
+import { Button } from 'react-bootstrap';
 import AboutComponent from "../components/main/About";
 import Category from "../components/main/Category";
 import FooterMain from "../components/main/FooterMain";
@@ -6,7 +7,7 @@ import SliderProduct from "../components/main/SliderProduct";
 import Header_Main from "../components/main/header";
 import HeroSection from "../components/main/hero";
 import Topic from "../components/main/topic";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 export default function HomePage() {
   let KnowledgeArray = [
     {
@@ -168,6 +169,7 @@ export default function HomePage() {
       <SliderProduct title='ورزشی' Category='sports'></SliderProduct>
       <AboutComponent></AboutComponent>
       <FooterMain></FooterMain>
+      
 
     </>
   );
