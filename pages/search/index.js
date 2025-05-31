@@ -19,7 +19,32 @@ export default function SearchPage() {
             <Header_Main></Header_Main>
 
             <div className="container-custom">
-            نتیجه جستجو : {product ? product : "در حال c"}
+                نتیجه جستجو : {product ? product : "در حال c"}
+                <div className="row">
+                    <div className="col-3">te</div>
+                    <div className="col-9">
+                        <div className="row">
+                            <div className="col-lg-2">
+                                <img src="/img/sony-playstation-5-slim-digital.png" className="img-fluid" />
+                            </div>
+                            <div className="col-lg-2">
+                                <img src="img/sony-playstation-5-slim-digital.png" className="img-fluid" />
+                            </div>
+                            <div className="col-lg-2">
+                                <img src="img/sony-playstation-5-slim-digital.png" className="img-fluid" />
+                            </div>
+                            <div className="col-lg-2">
+                                <img src="img/sony-playstation-5-slim-digital.png" className="img-fluid" />
+                            </div>
+                            <div className="col-lg-2">
+                                <img src="img/sony-playstation-5-slim-digital.png" className="img-fluid" />
+                            </div>
+                            <div className="col-lg-2">
+                                <img src="img/sony-playstation-5-slim-digital.png" className="img-fluid" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <FooterMain></FooterMain>
 
