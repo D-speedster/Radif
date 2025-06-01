@@ -1381,3 +1381,8 @@ footer .enamad img {
     background-color: #f0f0f0;
     transform: scale(1.1);
 }
+
+.Error404 h4 {
+    font-family: 'IRANYEKAN';
+    font-weight: 700;
+}

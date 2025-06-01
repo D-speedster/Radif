@@ -13,12 +13,12 @@ export default function Error404() {
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
             <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
             <Header_Main></Header_Main>
-            <div className='container-custom'>
-                <div className='row'>
-                    <h4>متاسفانه صفحه مورد نظر یافت نشد !</h4>
+            <div className='container-custom d-flex justify-content-center align-items-center' style={{ minHeight: '70vh' }}>
+                <div className='Error404 d-flex flex-column align-items-center gap-2'>
+                    <img src="/img/radif-logo.svg" width={200} height={100} alt="" />
+                    <h4 className="m-0">متاسفانه صفحه مورد نظر یافت نشد !😑 </h4>
                 </div>
             </div>
-
             <FooterMain></FooterMain>
         </>
     )
