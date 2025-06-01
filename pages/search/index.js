@@ -2,7 +2,7 @@ import { useRouter } from "next/router"
 import Header_Main from "../../components/main/header"
 import FooterMain from "../../components/main/FooterMain"
 import SliderProduct from "../../components/main/SliderProduct"
-
+import { Accordion } from 'react-bootstrap';
 
 export default function SearchPage() {
     const products = [
@@ -125,7 +125,7 @@ export default function SearchPage() {
         },
         {
             id: 14,
-            image: "",
+            image: "/img/ROG-Strix-GeForce-RTX-4070-SUPER-12GB-GDDR6X-OC-Edition-1.jpg",
             title: "کارت گرافیک NVIDIA GeForce RTX 4070",
             price: "۴۰,۰۰۰,۰۰۰",
             views: "+600",
@@ -134,7 +134,7 @@ export default function SearchPage() {
         },
         {
             id: 15,
-            image: "",
+            image: "/img/Logitech-G-Pro-X-Superlight-2-Pro-X-TKL-1.jpg",
             title: "موس و کیبورد بی‌سیم لاجیتک",
             price: "۲,۵۰۰,۰۰۰",
             views: "+300",
@@ -143,7 +143,7 @@ export default function SearchPage() {
         },
         {
             id: 16,
-            image: "",
+            image: "/img/ssd-my-passport-500gb-1.jpg",
             title: "هارد اکسترنال وسترن دیجیتال 2 ترابایت",
             price: "۳,۵۰۰,۰۰۰",
             views: "+550",
@@ -152,7 +152,7 @@ export default function SearchPage() {
         },
         {
             id: 17,
-            image: "",
+            image: "/img/htd-fs0103wr-compress.jpg",
             title: "مودم روتر وای فای تندا",
             price: "۱,۰۰۰,۰۰۰",
             views: "+700",
@@ -475,23 +475,46 @@ export default function SearchPage() {
             <Header_Main></Header_Main>
 
             <div className="container-custom">
-                نتیجه جستجو : {product ? product : "در حال c"}
+                نتیجه جستجو : {product ? product : "در حال "}
                 <div className="row">
-                    <div className="col-3">te</div>
-                    <div className="col-9">
-                        <div className="row">
+                    <div className="col-2">
+                        <div className="side-search">
+                            <div className="box-filter">
+                                <div className="container">
+                                    <Accordion >
+                                        <Accordion.Item eventKey="0">
+                                            <Accordion.Header>دسته بندی</Accordion.Header>
+                                            <Accordion.Body>
+                                                محتوا
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                        <br />
+                                        <Accordion.Item eventKey="1">
+                                            <Accordion.Header>دسته بندی</Accordion.Header>
+                                            <Accordion.Body>
+                                                محتوا
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                    </Accordion>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div className="col-10">
+                        <div className="search-result row">
                             {spre.map((item) => {
-                                return <div className="col-3 mt-4">
-                                    <div className="card" style={{height : '350px'}}>
-                                        <div className="card-img-top d-flex justify-content-center align-items-center">
-                                            <img className="mt-2" src={item.image} height='160px' />
+                                return <div className="col mt-4">
+                                    <div className="" style={{ height: '350px', width: '16rem', cursor: 'pointer' }}>
+                                        <div className="card-header-search">
+                                            <img className="card-img-top" src={item.image} height='255px' />
                                         </div>
-                                        <h6 className="card-header text-center mt-2">{item.title}</h6>
-                                        <div className="card-body">
-                                            <div className="text-center">
-                                                <h6>{item.price} تومان </h6>
-                                                <button className="btn btn-success w-100">موجود در 21 فروشگاه</button>
-                                            </div>
+                                        <h6 className="card-body-search mt-2">{item.title}</h6>
+                                        <div className="">
+
+                                            <span> شروع از : {item.price} تومان </span>
+
+
                                         </div>
                                     </div>
                                 </div>

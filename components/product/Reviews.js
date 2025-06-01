@@ -1,5 +1,5 @@
 export default function ReviewsComponent() {
-    <section id="section2" className="Reviews py-5">
+    return <section id="section2" className="Reviews py-5">
         <div className="container-custom">
             <h6 className="mt-4">تست ها و بررسی های تخصصی</h6>
             <div className="row row-cols-1 row-cols-md-3 g-4">

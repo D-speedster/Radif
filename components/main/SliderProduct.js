@@ -128,7 +128,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 14,
-      image: "",
+      image: "/img/ROG-Strix-GeForce-RTX-4070-SUPER-12GB-GDDR6X-OC-Edition-1.jpg",
       title: "کارت گرافیک NVIDIA GeForce RTX 4070",
       price: "۴۰,۰۰۰,۰۰۰",
       views: "+600",
