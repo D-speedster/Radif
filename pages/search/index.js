@@ -3,8 +3,18 @@ import Header_Main from "../../components/main/header"
 import FooterMain from "../../components/main/FooterMain"
 import SliderProduct from "../../components/main/SliderProduct"
 import { Accordion } from 'react-bootstrap';
+import { BsBasket3, BsFillSignpost2Fill } from "react-icons/bs";
+import { useState } from "react";
+import { FaShoppingCart, FaSortAmountDown } from "react-icons/fa";
+import { IoSearch } from "react-icons/io5";
+import { MdArrowBackIos } from "react-icons/md";
+import { HiOutlineShoppingCart } from "react-icons/hi2";
 
 export default function SearchPage() {
+    const [activeSort, setActiveSort] = useState("پربازدیدترین");
+    const handleSortClick = (value) => {
+        setActiveSort(value);
+    };
     const products = [
         {
             id: 1,
@@ -193,7 +203,7 @@ export default function SearchPage() {
             price: "۸,۰۰۰,۰۰۰",
             views: "+150",
             stores: "5",
-            genre: "home"
+            genre: "digital"
         },
         {
             id: 22,
@@ -350,12 +360,12 @@ export default function SearchPage() {
         },
         {
             id: 39,
-            image: "",
+            image: "/img/mi.jpg",
             title: "ترازوی دیجیتال شیائومی",
             price: "۷۰۰,۰۰۰",
             views: "+500",
             stores: "25",
-            genre: "health"
+            genre: "digital"
         },
         {
             id: 40,
@@ -474,14 +484,71 @@ export default function SearchPage() {
 
             <Header_Main></Header_Main>
 
-            <div className="container-custom">
-                نتیجه جستجو : {product ? product : "در حال "}
+            <div className="container-custom mt-5">
+
                 <div className="row">
-                    <div className="col-2">
+                    <div className="col-lg-2 d-lg-block d-none">
                         <div className="side-search">
                             <div className="box-filter">
-                                <div className="container">
-                                    <Accordion >
+                                <div className="container mt-2">
+
+                                    <span className="Related-span">جستجو‌های مرتبط</span>
+                                    <div className="Related-item">
+                                        <div className="d-flex justify-content-between">
+                                            <span>
+                                                <IoSearch />
+                                                Ps5
+                                            </span>
+                                            <i><MdArrowBackIos></MdArrowBackIos></i>
+                                        </div>
+                                    </div>
+                                    <div className="Related-item">
+                                        <div className="d-flex justify-content-between">
+                                            <span>
+                                                <IoSearch />
+                                                ps4
+
+                                            </span>
+
+                                            <i><MdArrowBackIos></MdArrowBackIos></i>
+                                        </div>
+                                    </div>
+                                    <div className="Related-item">
+                                        <div className="d-flex justify-content-between">
+                                            <span>
+                                                <IoSearch />
+                                                ps3
+                                            </span>
+                                            <i><MdArrowBackIos></MdArrowBackIos></i>
+                                        </div>
+                                    </div>
+                                    <div className="Related-item">
+                                        <div className="d-flex justify-content-between">
+                                            <span>
+                                                <IoSearch />
+                                                ps2
+                                            </span>
+                                            <i><MdArrowBackIos></MdArrowBackIos></i>
+                                        </div>
+                                    </div>
+                                    <div className="Related-item">
+                                        <div className="d-flex justify-content-between">
+                                            <span>
+
+                                                <IoSearch />
+                                                ps1
+                                            </span>
+                                            <i><MdArrowBackIos></MdArrowBackIos></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="side-search mt-2">
+                            <div className="box-filter">
+                                <div className="container mt-2">
+                                    {/* <Accordion >
+                                        <br />
                                         <Accordion.Item eventKey="0">
                                             <Accordion.Header>دسته بندی</Accordion.Header>
                                             <Accordion.Body>
@@ -490,29 +557,118 @@ export default function SearchPage() {
                                         </Accordion.Item>
                                         <br />
                                         <Accordion.Item eventKey="1">
-                                            <Accordion.Header>دسته بندی</Accordion.Header>
+                                            <Accordion.Header>موجودی کالا</Accordion.Header>
                                             <Accordion.Body>
                                                 محتوا
                                             </Accordion.Body>
                                         </Accordion.Item>
-                                    </Accordion>
+                                        <br />
+                                        <Accordion.Item eventKey="2">
+                                            <Accordion.Header>جستجو نتایج</Accordion.Header>
+                                            <Accordion.Body>
+                                                محتوا
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                    </Accordion> */}
+                                    <span className="Related-span">فیلتر ها</span>
+                                    <div className="Related-item">
+                                        <div className="">
+                                            <Accordion >
+                                                <br />
+                                                <Accordion.Item eventKey="0">
+                                                    <Accordion.Header>دسته بندی</Accordion.Header>
+                                                    <Accordion.Body>
+                                                        محتوا
+                                                    </Accordion.Body>
+                                                </Accordion.Item>
+                                                <br />
+                                                <Accordion.Item eventKey="1">
+                                                    <Accordion.Header>موجودی کالا</Accordion.Header>
+                                                    <Accordion.Body>
+                                                        محتوا
+                                                    </Accordion.Body>
+                                                </Accordion.Item>
+                                                <br />
+                                                <Accordion.Item eventKey="2">
+                                                    <Accordion.Header>جستجو نتایج</Accordion.Header>
+                                                    <Accordion.Body>
+                                                        محتوا
+                                                    </Accordion.Body>
+                                                </Accordion.Item>
+                                            </Accordion>
+                                        </div>
+                                    </div>
+                                    <div className="Related-item">
+
+                                    </div>
+                                    <div className="Related-item">
+
+                                    </div>
+                                    <div className="Related-item">
+
+                                    </div>
+                                    <div className="Related-item">
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                    <div className="col-10">
-                        <div className="search-result row">
+                    <div className="col-lg-10">
+                        <div className="sort-top">
+
+                            <div className="d-flex">
+                                <FaSortAmountDown style={{ marginTop: '2px' }} />
+                                <span style={{ fontSize: '14px', fontWeight: '600', cursor: 'pointer', marginRight: '4px' }}>مرتب سازی:</span>
+                                {["مرتبط ترین", "گران ترین", "ارزان ترین", "پربازدیدترین"].map((item) => (
+                                    <span
+                                        key={item}
+                                        className={`item-sort ${activeSort === item ? "active" : ""}`}
+                                        onClick={() => handleSortClick(item)}
+                                        style={{ cursor: "pointer" }}
+                                    >
+                                        {item}
+                                    </span>
+                                ))}
+
+
+                            </div>
+
+                        </div>
+                        <hr style={{ color: 'red', border: '0.2px solid #ddd', width: '99.5%' }} />
+
+                        <div className="search-result row ">
                             {spre.map((item) => {
-                                return <div className="col mt-4">
-                                    <div className="" style={{ height: '350px', width: '16rem', cursor: 'pointer' }}>
+                                return <div className="col">
+                                    <div className="card-search">
                                         <div className="card-header-search">
                                             <img className="card-img-top" src={item.image} height='255px' />
                                         </div>
-                                        <h6 className="card-body-search mt-2">{item.title}</h6>
-                                        <div className="">
+                                        <h6 className="card-body-search ">{item.title}</h6>
+                                        <div className="d-flex justify-content-between">
+                                            <div>
+                                                <HiOutlineShoppingCart style={{ marginTop: '-5px', color: 'red' }} />
 
-                                            <span> شروع از : {item.price} تومان </span>
+                                                <span style={{ fontSize: '14px', fontWeight: '600' }}> حضوری | آنلاین</span>
+                                            </div>
+
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                                <span style={{ fontSize: '14px', position: 'relative', top: '1px' }}>4.5</span>
+                                                <box-icon
+                                                    name="star"
+                                                    type="solid"
+                                                    color="#f9d635"
+                                                    size="16px"
+                                                    style={{ position: 'relative', top: '-1px' }}
+                                                ></box-icon>
+                                            </div>
+
+
+                                        </div>
+                                        <div className="text-right mt-3">
+                                            <span
+                                                style={{ fontSize: '16px', fontWeight: '600' }}
+                                            > شروع از : {item.price} تومان </span>
 
 
                                         </div>
@@ -524,7 +680,7 @@ export default function SearchPage() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
             <FooterMain></FooterMain>
 
         </>
