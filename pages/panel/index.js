@@ -4,7 +4,7 @@ import Switcher from "../../components/panel/switcher";
 import SidePanel from "../../components/panel/SidePanel";
 import Script from "next/script";
 import { useEffect } from "react";
-import initSelect2 from '../../src/initSelect2';
+
 
 export default function Home() {
     useEffect(() => {
