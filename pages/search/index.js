@@ -493,11 +493,17 @@ export default function SearchPage() {
                                 <div className="container mt-2">
 
                                     <span className="Related-span">جستجو‌های مرتبط</span>
+                                    <hr style={{ color: 'red', border: '0.2px solid #ddd' }} />
                                     <div className="Related-item">
                                         <div className="d-flex justify-content-between">
                                             <span>
-                                                <IoSearch />
-                                                Ps5
+                                                <IoSearch style={{
+                                                    fontSize: '16px',
+                                                    marginTop: '-4px'
+                                                }} />
+                                                <span style={{ fontSize: '16px', fontWeight: '600', paddingRight: '10px' }}>
+                                                    ps1
+                                                </span>
                                             </span>
                                             <i><MdArrowBackIos></MdArrowBackIos></i>
                                         </div>
@@ -505,28 +511,28 @@ export default function SearchPage() {
                                     <div className="Related-item">
                                         <div className="d-flex justify-content-between">
                                             <span>
-                                                <IoSearch />
-                                                ps4
+                                                <IoSearch style={{
+                                                    fontSize: '16px',
+                                                    marginTop: '-4px'
+                                                }} />
+                                                <span style={{ fontSize: '16px', fontWeight: '600', paddingRight: '10px' }}>
+                                                    ps1
+                                                </span>
+                                            </span>
 
-                                            </span>
-
                                             <i><MdArrowBackIos></MdArrowBackIos></i>
                                         </div>
                                     </div>
                                     <div className="Related-item">
                                         <div className="d-flex justify-content-between">
                                             <span>
-                                                <IoSearch />
-                                                ps3
-                                            </span>
-                                            <i><MdArrowBackIos></MdArrowBackIos></i>
-                                        </div>
-                                    </div>
-                                    <div className="Related-item">
-                                        <div className="d-flex justify-content-between">
-                                            <span>
-                                                <IoSearch />
-                                                ps2
+                                                <IoSearch style={{
+                                                    fontSize: '16px',
+                                                    marginTop: '-4px'
+                                                }} />
+                                                <span style={{ fontSize: '16px', fontWeight: '600', paddingRight: '10px' }}>
+                                                    ps1
+                                                </span>
                                             </span>
                                             <i><MdArrowBackIos></MdArrowBackIos></i>
                                         </div>
@@ -534,9 +540,27 @@ export default function SearchPage() {
                                     <div className="Related-item">
                                         <div className="d-flex justify-content-between">
                                             <span>
-
-                                                <IoSearch />
-                                                ps1
+                                                <IoSearch style={{
+                                                    fontSize: '16px',
+                                                    marginTop: '-4px'
+                                                }} />
+                                                <span style={{ fontSize: '16px', fontWeight: '600', paddingRight: '10px' }}>
+                                                    ps1
+                                                </span>
+                                            </span>
+                                            <i><MdArrowBackIos></MdArrowBackIos></i>
+                                        </div>
+                                    </div>
+                                    <div className="Related-item">
+                                        <div className="d-flex justify-content-between">
+                                            <span>
+                                                <IoSearch style={{
+                                                    fontSize: '16px',
+                                                    marginTop: '-4px'
+                                                }} />
+                                                <span style={{ fontSize: '16px', fontWeight: '600', paddingRight: '10px' }}>
+                                                    ps1
+                                                </span>
                                             </span>
                                             <i><MdArrowBackIos></MdArrowBackIos></i>
                                         </div>
@@ -546,31 +570,9 @@ export default function SearchPage() {
                         </div>
                         <div className="side-search mt-2">
                             <div className="box-filter">
-                                <div className="container mt-2">
-                                    {/* <Accordion >
-                                        <br />
-                                        <Accordion.Item eventKey="0">
-                                            <Accordion.Header>دسته بندی</Accordion.Header>
-                                            <Accordion.Body>
-                                                محتوا
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-                                        <br />
-                                        <Accordion.Item eventKey="1">
-                                            <Accordion.Header>موجودی کالا</Accordion.Header>
-                                            <Accordion.Body>
-                                                محتوا
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-                                        <br />
-                                        <Accordion.Item eventKey="2">
-                                            <Accordion.Header>جستجو نتایج</Accordion.Header>
-                                            <Accordion.Body>
-                                                محتوا
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-                                    </Accordion> */}
-                                    <span className="Related-span">فیلتر ها</span>
+                                <div className="container mt-3">
+
+                                    <span style={{ fontSize: '19px', fontWeight: '600' }}>فیلتر ها</span>
                                     <div className="Related-item">
                                         <div className="">
                                             <Accordion >
@@ -583,14 +585,14 @@ export default function SearchPage() {
                                                 </Accordion.Item>
                                                 <br />
                                                 <Accordion.Item eventKey="1">
-                                                    <Accordion.Header>موجودی کالا</Accordion.Header>
+                                                    <Accordion.Header>برند</Accordion.Header>
                                                     <Accordion.Body>
                                                         محتوا
                                                     </Accordion.Body>
                                                 </Accordion.Item>
                                                 <br />
                                                 <Accordion.Item eventKey="2">
-                                                    <Accordion.Header>جستجو نتایج</Accordion.Header>
+                                                    <Accordion.Header>محدوده قیمت</Accordion.Header>
                                                     <Accordion.Body>
                                                         محتوا
                                                     </Accordion.Body>
@@ -599,10 +601,16 @@ export default function SearchPage() {
                                         </div>
                                     </div>
                                     <div className="Related-item">
-
+                                        <div className="d-flex justify-content-between">
+                                            <span>خرید حضوری</span>
+                                            <input className="form control" type="checkbox" />
+                                        </div>
                                     </div>
                                     <div className="Related-item">
-
+                                        <div className="d-flex justify-content-between">
+                                            <span>کالا های موجود</span>
+                                            <input className="form control" type="checkbox" />
+                                        </div>
                                     </div>
                                     <div className="Related-item">
 
@@ -647,7 +655,7 @@ export default function SearchPage() {
                                         <h6 className="card-body-search ">{item.title}</h6>
                                         <div className="d-flex justify-content-between">
                                             <div>
-                                                <HiOutlineShoppingCart style={{ marginTop: '-5px', color: 'red' }} />
+                                                <HiOutlineShoppingCart style={{ marginTop: '-3px', color: 'red', fontWeight: 'bold' }} />
 
                                                 <span style={{ fontSize: '14px', fontWeight: '600' }}> حضوری | آنلاین</span>
                                             </div>

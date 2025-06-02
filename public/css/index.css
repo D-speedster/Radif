@@ -1440,14 +1440,14 @@ footer .enamad img {
 
 .side-search {
     min-height: 30vh;
-    border: 0.2px solid #ccc;
+    border: 0.1px solid rgba(138, 138, 138, 0.4);
     border-radius: 10px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
     margin-top: 10px;
 }
 
 .side-search .Related-span {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     color: #34333a
 }
@@ -1479,8 +1479,8 @@ footer .enamad img {
     text-align: right !important;
     justify-content: space-between;
     padding: 0px !important;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 15x;
+    font-weight: 600;
 }
 
 .accordion-item {
@@ -1504,6 +1504,7 @@ footer .enamad img {
     color: inherit !important;
     border: none;
     padding-top: 0.5rem;
+
 }
 
 .sort-top {
