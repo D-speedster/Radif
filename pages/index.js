@@ -1,4 +1,3 @@
-import { Button } from 'react-bootstrap';
 import AboutComponent from "../components/main/About";
 import Category from "../components/main/Category";
 import FooterMain from "../components/main/FooterMain";
