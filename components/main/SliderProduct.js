@@ -30,7 +30,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 3,
-      image: "",
+      image: "/img/55LJ61_A_Desktop_01.jpg",
       title: "تلویزیون ال جی مدل 55 اینچ",
       price: "۳۵,۰۰۰,۰۰۰",
       views: "+700",
@@ -75,7 +75,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 8,
-      image: "",
+      image: "/img/209-edit-scaled.jpg",
       title: "دوربین عکاسی کانن مدل EOS 250D",
       price: "۲۵,۰۰۰,۰۰۰",
       views: "+350",
@@ -138,7 +138,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 15,
-      image: "",
+      image: "/img/Logitech-G-Pro-X-Superlight-2-Pro-X-TKL-1.jpg",
       title: "موس و کیبورد بی‌سیم لاجیتک",
       price: "۲,۵۰۰,۰۰۰",
       views: "+300",
@@ -147,7 +147,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 16,
-      image: "",
+      image: "/img/ssd-my-passport-500gb-1.jpg",
       title: "هارد اکسترنال وسترن دیجیتال 2 ترابایت",
       price: "۳,۵۰۰,۰۰۰",
       views: "+550",
@@ -156,7 +156,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 17,
-      image: "",
+      image: "/img/982159453_green_0_l.jpg",
       title: "مودم روتر وای فای تندا",
       price: "۱,۰۰۰,۰۰۰",
       views: "+700",
@@ -165,7 +165,7 @@ const SliderProduct = (prop) => {
     },
     {
       id: 18,
-      image: "",
+      image: "/img/htd-fs0103wr-compress.jpg",
       title: "پرینتر جوهرافشان اپسون",
       price: "۴,۰۰۰,۰۰۰",
       views: "+200",
