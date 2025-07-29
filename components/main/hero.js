@@ -4,7 +4,7 @@ export default function HeroSection(params) {
         <div className="container-custom mt-2">
             <div className="header-search d-flex flex-wrap">
                 <div className="phone-image-wrapper">
-                    <img src="/img/Web_hero_desktop.png" className="phone-image" alt="اپلیکیشن ردیف" />
+                    <img src="/img/hero.png" className="phone-image" alt="اپلیکیشن ردیف" />
                 </div>
                 <div className="header-content">
                     <div className="search-container">

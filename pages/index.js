@@ -156,6 +156,7 @@ export default function HomePage() {
       <title>ردیف | موتور جستجو</title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
       <link rel="stylesheet" href="/css/index.css" />
+      <link rel="stylesheet" href="/css/theme.css" />
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
       <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
@@ -166,10 +167,10 @@ export default function HomePage() {
       <Category></Category>
       <SliderProduct title='دیجیتال' Category='digital'></SliderProduct>
       <SliderProduct title='منزل' Category='home'></SliderProduct>
-      <Topic></Topic>
       <Knowledge {...newsAray}></Knowledge>
       <SliderProduct title='ورزشی' Category='sports'></SliderProduct>
       <AboutComponent></AboutComponent>
+      <Topic></Topic>
       <FooterMain></FooterMain>
 
 
