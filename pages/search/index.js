@@ -647,7 +647,7 @@ export default function SearchPage() {
 
                         <div className="search-result row ">
                             {spre.map((item) => {
-                                return <div className="col">
+                                return <div className="col-lg-3 col-md-6 col-6 mb-3">
                                     <div className="card-search">
                                         <div className="card-header-search">
                                             <img className="card-img-top" src={item.image} height='255px' />
