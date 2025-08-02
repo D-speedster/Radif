@@ -1,13 +1,15 @@
 export default function ReviewsComponent() {
-    return <section id="section2" className="Reviews py-5">
+    return <section id="section2" className="reviews-section">
         <div className="container-custom">
-            <h6 className="mt-4">تست ها و بررسی های تخصصی</h6>
+            <div className="reviews-header">
+                <h2 className="reviews-title">تست ها و بررسی های تخصصی</h2>
+                <p className="reviews-subtitle">نظرات کاربران و بررسی های تخصصی محصول</p>
+            </div>
             <div className="row row-cols-1 row-cols-md-3 g-4">
 
 
                 <div className="col">
-                    <div
-                        className="top-comment-item p-3 rounded-4 shadow-sm bg-white h-100 border border-light-subtle">
+                    <div className="review-card">
                         <div className="d-flex justify-content-between align-items-center mb-2">
                             <div className="d-flex align-items-center gap-2">
                                 <box-icon type="solid" name="user" size="sm" color="#6c757d"></box-icon>
@@ -35,8 +37,7 @@ export default function ReviewsComponent() {
 
 
                 <div className="col">
-                    <div
-                        className="top-comment-item p-3 rounded-4 shadow-sm bg-white h-100 border border-light-subtle">
+                    <div className="review-card">
                         <div className="d-flex justify-content-between align-items-center mb-2">
                             <div className="d-flex align-items-center gap-2">
                                 <box-icon type="solid" name="user" size="sm" color="#6c757d"></box-icon>
@@ -57,8 +58,7 @@ export default function ReviewsComponent() {
                 </div>
 
                 <div className="col">
-                    <div
-                        className="top-comment-item p-3 rounded-4 shadow-sm bg-white h-100 border border-light-subtle">
+                    <div className="review-card">
                         <div className="d-flex justify-content-between align-items-center mb-2">
                             <div className="d-flex align-items-center gap-2">
                                 <box-icon type="solid" name="user" size="sm" color="#6c757d"></box-icon>
@@ -80,10 +80,10 @@ export default function ReviewsComponent() {
                 </div>
 
             </div>
-            <br />
-            <h3>نظرات : </h3>
-            <h5>قبل از خرید نگاهی به نظرات دیگران بیندازید.</h5>
-            <br />
+            <div className="reviews-rating-section">
+                <h3 className="reviews-rating-title">نظرات کاربران</h3>
+                <h5 className="reviews-rating-subtitle">قبل از خرید نگاهی به نظرات دیگران بیندازید</h5>
+            </div>
             <div className="row align-items-start">
 
                 <div className="col-lg-6 mb-4">

@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 import Footer from '../../../components/panel/Footer'
 import Header_Main from '../../../components/main/header'
 import Breadcrumb from '../../../components/product/Breadcrumb'
@@ -80,14 +81,16 @@ export default function ProductPage() {
 
     return (
         <>
-            <meta charset="UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>{slug}</title>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-            <link rel="stylesheet" href="/css/index.css" />
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-            <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-
+            <Head>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>{slug}</title>
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+                <link rel="stylesheet" href="/css/index.css" />
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+                <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" async></script>
+            </Head>
             <Header_Main />
             <Breadcrumb />
             <SectionProduct />
@@ -95,33 +98,56 @@ export default function ProductPage() {
                 <div className="container-custom">
                     <div className="row">
                         <div className="col-lg-9">
-                            <section id="section1" className="price-shops">
-                                <div className="filter-product">
-                                    <div className="d-flex justify-content-between align-items-center">
-                                        <div className="d-flex align-items-center gap-2">
-                                            <button
-                                                style={{ backgroundColor: '#FFF' }}
-                                                className="btn rounded-3">فروشندگان</button>
-                                            <button style={{ backgroundColor: '#FFF' }}
-                                                className="btn btn-light rounded-3">نظرات</button>
-                                            <button style={{ backgroundColor: '#FFF' }}
-                                                className="btn btn-light rounded-3">مشخصات</button>
-                                            <button style={{ backgroundColor: '#FFF' }}
-                                                className="btn btn-light rounded-3">توضیحات</button>
-
+                            <div className="product-tabs-container">
+                                <ul className="nav nav-tabs product-tabs" id="productTabs" role="tablist">
+                                    <li className="nav-item" role="presentation">
+                                        <button className="nav-link active" id="prices-tab" data-bs-toggle="tab" data-bs-target="#prices" type="button" role="tab" aria-controls="prices" aria-selected="true">
+                                            قیمت ها
+                                        </button>
+                                    </li>
+                                    <li className="nav-item" role="presentation">
+                                        <button className="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">
+                                            نظرات
+                                        </button>
+                                    </li>
+                                    <li className="nav-item" role="presentation">
+                                        <button className="nav-link" id="history-tab" data-bs-toggle="tab" data-bs-target="#history" type="button" role="tab" aria-controls="history" aria-selected="false">
+                                            سابقه قیمتی
+                                        </button>
+                                    </li>
+                                    <li className="nav-item" role="presentation">
+                                        <button className="nav-link" id="details-tab" data-bs-toggle="tab" data-bs-target="#details" type="button" role="tab" aria-controls="details" aria-selected="false">
+                                            مشخصات محصول
+                                        </button>
+                                    </li>
+                                    <li className="nav-item" role="presentation">
+                                        <button className="nav-link" id="features-tab" data-bs-toggle="tab" data-bs-target="#features" type="button" role="tab" aria-controls="features" aria-selected="false">
+                                            قابلیت ها
+                                        </button>
+                                    </li>
+                                </ul>
+                                <div className="tab-content" id="productTabsContent">
+                                    <div className="tab-pane fade show active" id="prices" role="tabpanel" aria-labelledby="prices-tab">
+                                        <section id="section1" className="price-shops">
+                                            <SellersComponent products={products} />
+                                        </section>
+                                    </div>
+                                    <div className="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                                        <ReviewsComponent />
+                                    </div>
+                                    <div className="tab-pane fade" id="history" role="tabpanel" aria-labelledby="history-tab">
+                                        <PriceHistory />
+                                    </div>
+                                    <div className="tab-pane fade" id="details" role="tabpanel" aria-labelledby="details-tab">
+                                        <div className="product-details-content">
+                                            <p>Product details content will go here...</p>
                                         </div>
-                                        <div>
-                                            <button style={{ backgroundColor: '#FFF' }}
-                                                className="btn btn-light rounded-4">پیشنهاد</button>
-                                        </div>
-
-
+                                    </div>
+                                    <div className="tab-pane fade" id="features" role="tabpanel" aria-labelledby="features-tab">
+                                        <FeaturesComponent />
                                     </div>
                                 </div>
-                                <SellersComponent {...products}></SellersComponent>
-
-
-                            </section>
+                            </div>
                         </div>
                         <AdsComponent img={'/img/ads3.png'} ></AdsComponent>
                     </div >
@@ -130,16 +156,9 @@ export default function ProductPage() {
             <div className="container-custom">
                 <div className='row'>
                     <div className='col-lg-9'>
-                        <ReviewsComponent
-                        />
-
-                        <PriceHistory />
-                        <FeaturesComponent />
-
                         <section id="section5" className="Similar-products">
                             <SliderProduct></SliderProduct>
                         </section>
-
                     </div>
                     <AdsComponent img={'/img/ads3.png'} />
                 </div >

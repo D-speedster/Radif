@@ -86,26 +86,7 @@ export default function SectionProduct() {
             </div>
           </div>
 
-          <div className="tabs" id="tabs">
-            <div className="d-flex container-custom">
-              {[
-                { id: 'section1', label: 'فروشندگان' },
-                { id: 'section2', label: 'نظرات' },
-                { id: 'section3', label: 'سابقه قیمتی' },
-                { id: 'section4', label: 'مشخصات' },
-                { id: 'section5', label: 'مشابه' },
-              ].map((item, index) => (
-                <button
-                  key={index}
-                  style={{ border: 'none', backgroundColor: '#FFF' }}
-                  className={`tab-button ${index !== 4 ? 'ms-5 pb-2' : ''}`}
-                  data-scroll={item.id}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-          </div>
+       
         </div>
 
         <AdsComponent img={'/img/ads.png'} />
