@@ -6,6 +6,7 @@ import SliderProduct from "../components/main/SliderProduct";
 import Header_Main from "../components/main/header";
 import HeroSection from "../components/main/hero";
 import Topic from "../components/main/topic";
+import BottomNavigation from "../components/main/BottomNavigation";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function HomePage() {
@@ -162,16 +163,27 @@ export default function HomePage() {
 
 
 
-      <Header_Main></Header_Main>
-      <HeroSection></HeroSection>
-      <Category></Category>
-      <SliderProduct title='دیجیتال' Category='digital'></SliderProduct>
-      <SliderProduct title='منزل' Category='home'></SliderProduct>
-      <Knowledge {...newsAray}></Knowledge>
-      <SliderProduct title='ورزشی' Category='sports'></SliderProduct>
-      {/* <AboutComponent></AboutComponent> */}
-      <Topic></Topic>
-      <FooterMain></FooterMain>
+      <div className="main-content-wrapper">
+        <Header_Main></Header_Main>
+        <HeroSection></HeroSection>
+        <Category></Category>
+        <SliderProduct title='دیجیتال' Category='digital'></SliderProduct>
+        <SliderProduct title='منزل' Category='home'></SliderProduct>
+        <Knowledge {...newsAray}></Knowledge>
+        <SliderProduct title='ورزشی' Category='sports'></SliderProduct>
+        {/* <AboutComponent></AboutComponent> */}
+        <Topic></Topic>
+        <FooterMain></FooterMain>
+      </div>
+      <BottomNavigation></BottomNavigation>
+      
+      <style jsx>{`
+        @media (max-width: 991px) {
+          .main-content-wrapper {
+            padding-bottom: 80px;
+          }
+        }
+      `}</style>
 
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

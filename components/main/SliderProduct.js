@@ -543,17 +543,29 @@ const SliderProduct = (prop) => {
           navigation={true}
 
           breakpoints={{
-            640: {
+            320: {
               slidesPerView: 2,
-              spaceBetween: 20,
+              spaceBetween: 10,
+            },
+            576: {
+              slidesPerView: 2,
+              spaceBetween: 15,
             },
             768: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            992: {
               slidesPerView: 4,
               spaceBetween: 20,
             },
-            1024: {
+            1200: {
+              slidesPerView: 5,
+              spaceBetween: 20,
+            },
+            1400: {
               slidesPerView: 6,
-              spaceBetween: 7,
+              spaceBetween: 20,
             },
           }}
           modules={[Pagination, Navigation]}

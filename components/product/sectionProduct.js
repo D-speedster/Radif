@@ -5,6 +5,7 @@ import { BsStarFill, BsBellFill } from "react-icons/bs"
 import { BiGitCompare } from "react-icons/bi"
 import AdsComponent from "./ads"
 
+
 export default function SectionProduct() {
   const [mainImage, setMainImage] = useState('/img/iphone16.png')
 
@@ -88,8 +89,7 @@ export default function SectionProduct() {
 
        
         </div>
-
-        <AdsComponent img={'/img/ads.png'} />
+     
       </div>
     </div>
   )

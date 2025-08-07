@@ -5,7 +5,7 @@ import Header_Main from '../../../components/main/header'
 import Breadcrumb from '../../../components/product/Breadcrumb'
 import SectionProduct from '../../../components/product/sectionProduct'
 import FooterMain from '../../../components/main/FooterMain'
-import SliderProduct from '../../../components/main/SliderProduct'
+import ProductGrid from '../../../components/product/ProductGrid'
 import SellersComponent from '../../../components/product/sellers'
 import FeaturesComponent from '../../../components/product/features'
 import PriceHistory from '../../../components/product/PriceHistory'
@@ -149,19 +149,14 @@ export default function ProductPage() {
                                 </div>
                             </div>
                         </div>
-                        <AdsComponent img={'/img/ads3.png'} ></AdsComponent>
+                        <AdsComponent img={'/img/ads3.png'} />
                     </div >
                 </div >
             </div>
-            <div className="container-custom">
-                <div className='row'>
-                    <div className='col-lg-9'>
-                        <section id="section5" className="Similar-products">
-                            <SliderProduct></SliderProduct>
-                        </section>
-                    </div>
-                    <AdsComponent img={'/img/ads3.png'} />
-                </div >
+            <div className="container-fluid px-3">
+                <section id="section5" className="Similar-products">
+                    <ProductGrid Category="digital" title="دیجیتال"></ProductGrid>
+                </section>
             </div >
 
             <FooterMain></FooterMain>
