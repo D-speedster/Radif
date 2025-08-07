@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
 import Link from 'next/link';
@@ -8,7 +8,32 @@ import 'swiper/css/pagination';
 import { FaRegHeart } from "react-icons/fa";
 
 const SliderProduct = (prop) => {
-  
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading delay to prevent layout shift
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 800);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const renderSkeletonLoader = () => {
+    return (
+      <div className="skeleton-loader">
+        {[...Array(6)].map((_, index) => (
+          <div key={index} className="skeleton-item">
+            <div className="skeleton-image"></div>
+            <div className="skeleton-title"></div>
+            <div className="skeleton-price"></div>
+            <div className="skeleton-available"></div>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   const products = [
     {
       id: 1,
@@ -537,6 +562,9 @@ const SliderProduct = (prop) => {
           <a href="#">مشاهده تمامی محصولات </a>
         </div>
 
+        {isLoading ? (
+          renderSkeletonLoader()
+        ) : (
         <Swiper
           slidesPerView={1}
           spaceBetween={10}
@@ -601,6 +629,7 @@ const SliderProduct = (prop) => {
           ))}
           <div className="swiper-pagination"></div>
         </Swiper>
+        )}
       </div>
     </section>
   );
