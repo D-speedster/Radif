@@ -1,11 +1,13 @@
 import { useRouter } from "next/router"
+import Link from "next/link"
 import Header_Main from "../../components/main/header"
 import FooterMain from "../../components/main/FooterMain"
 import SliderProduct from "../../components/main/SliderProduct"
+import BottomNavigation from "../../components/main/BottomNavigation"
 import { Accordion } from 'react-bootstrap';
 import { BsBasket3, BsFillSignpost2Fill } from "react-icons/bs";
 import { useState } from "react";
-import { FaShoppingCart, FaSortAmountDown } from "react-icons/fa";
+import { FaShoppingCart, FaSortAmountDown, FaRegHeart } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { MdArrowBackIos } from "react-icons/md";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
@@ -568,119 +570,160 @@ export default function SearchPage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="side-search mt-2">
-                            <div className="box-filter">
-                                <div className="container mt-3">
-
-                                    <span style={{ fontSize: '19px', fontWeight: '600' }}>فیلتر ها</span>
-                                    <div className="Related-item">
-                                        <div className="">
-                                            <Accordion >
-                                                <br />
-                                                <Accordion.Item eventKey="0">
-                                                    <Accordion.Header>دسته بندی</Accordion.Header>
-                                                    <Accordion.Body>
-                                                        محتوا
-                                                    </Accordion.Body>
-                                                </Accordion.Item>
-                                                <br />
-                                                <Accordion.Item eventKey="1">
-                                                    <Accordion.Header>برند</Accordion.Header>
-                                                    <Accordion.Body>
-                                                        محتوا
-                                                    </Accordion.Body>
-                                                </Accordion.Item>
-                                                <br />
-                                                <Accordion.Item eventKey="2">
-                                                    <Accordion.Header>محدوده قیمت</Accordion.Header>
-                                                    <Accordion.Body>
-                                                        محتوا
-                                                    </Accordion.Body>
-                                                </Accordion.Item>
-                                            </Accordion>
-                                        </div>
-                                    </div>
-                                    <div className="Related-item">
-                                        <div className="d-flex justify-content-between">
-                                            <span>خرید حضوری</span>
-                                            <input className="form control" type="checkbox" />
-                                        </div>
-                                    </div>
-                                    <div className="Related-item">
-                                        <div className="d-flex justify-content-between">
-                                            <span>کالا های موجود</span>
-                                            <input className="form control" type="checkbox" />
-                                        </div>
-                                    </div>
-                                    <div className="Related-item">
-
-                                    </div>
-                                    <div className="Related-item">
-
+                        <div className="sidebar-modern mt-2">
+                            <div className="filter-section-modern">
+                                <div className="filter-header">
+                                    <h3 className="filter-title">فیلتر ها</h3>
+                                    <button className="clear-filters-btn">پاک کردن همه</button>
+                                </div>
+                                
+                                <div className="filter-content">
+                                    <Accordion className="modern-accordion">
+                                        <Accordion.Item eventKey="0" className="filter-accordion-item">
+                                            <Accordion.Header className="filter-accordion-header">
+                                                <span className="filter-icon">📂</span>
+                                                دسته بندی
+                                            </Accordion.Header>
+                                            <Accordion.Body className="filter-accordion-body">
+                                                <div className="filter-options">
+                                                    <label className="filter-option">
+                                                        <input type="checkbox" className="filter-checkbox" />
+                                                        <span className="checkmark"></span>
+                                                        الکترونیک
+                                                    </label>
+                                                    <label className="filter-option">
+                                                        <input type="checkbox" className="filter-checkbox" />
+                                                        <span className="checkmark"></span>
+                                                        گیمینگ
+                                                    </label>
+                                                    <label className="filter-option">
+                                                        <input type="checkbox" className="filter-checkbox" />
+                                                        <span className="checkmark"></span>
+                                                        کنسول بازی
+                                                    </label>
+                                                </div>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                        
+                                        <Accordion.Item eventKey="1" className="filter-accordion-item">
+                                            <Accordion.Header className="filter-accordion-header">
+                                                <span className="filter-icon">🏷️</span>
+                                                برند
+                                            </Accordion.Header>
+                                            <Accordion.Body className="filter-accordion-body">
+                                                <div className="filter-options">
+                                                    <label className="filter-option">
+                                                        <input type="checkbox" className="filter-checkbox" />
+                                                        <span className="checkmark"></span>
+                                                        مایکروسافت
+                                                    </label>
+                                                    <label className="filter-option">
+                                                        <input type="checkbox" className="filter-checkbox" />
+                                                        <span className="checkmark"></span>
+                                                        سونی
+                                                    </label>
+                                                    <label className="filter-option">
+                                                        <input type="checkbox" className="filter-checkbox" />
+                                                        <span className="checkmark"></span>
+                                                        نینتندو
+                                                    </label>
+                                                </div>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                        
+                                        <Accordion.Item eventKey="2" className="filter-accordion-item">
+                                            <Accordion.Header className="filter-accordion-header">
+                                                <span className="filter-icon">💰</span>
+                                                محدوده قیمت
+                                            </Accordion.Header>
+                                            <Accordion.Body className="filter-accordion-body">
+                                                <div className="price-range-container">
+                                                    <div className="price-inputs">
+                                                        <input type="number" placeholder="حداقل" className="price-input" />
+                                                        <span className="price-separator">تا</span>
+                                                        <input type="number" placeholder="حداکثر" className="price-input" />
+                                                    </div>
+                                                    <button className="apply-price-btn">اعمال</button>
+                                                </div>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                    </Accordion>
+                                    
+                                    <div className="quick-filters">
+                                        <h4 className="quick-filters-title">فیلترهای سریع</h4>
+                                        <label className="quick-filter-option">
+                                            <input type="checkbox" className="filter-checkbox" />
+                                            <span className="checkmark"></span>
+                                            <span className="quick-filter-text">خرید حضوری</span>
+                                        </label>
+                                        <label className="quick-filter-option">
+                                            <input type="checkbox" className="filter-checkbox" />
+                                            <span className="checkmark"></span>
+                                            <span className="quick-filter-text">کالاهای موجود</span>
+                                        </label>
+                                        <label className="quick-filter-option">
+                                            <input type="checkbox" className="filter-checkbox" />
+                                            <span className="checkmark"></span>
+                                            <span className="quick-filter-text">ارسال رایگان</span>
+                                        </label>
+                                        <label className="quick-filter-option">
+                                            <input type="checkbox" className="filter-checkbox" />
+                                            <span className="checkmark"></span>
+                                            <span className="quick-filter-text">تخفیف دار</span>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-10">
-                        <div className="sort-top">
-
-                            <div className="d-flex">
-                                <FaSortAmountDown style={{ marginTop: '2px' }} />
-                                <span style={{ fontSize: '14px', fontWeight: '600', cursor: 'pointer', marginRight: '4px' }}>مرتب سازی:</span>
-                                {["مرتبط ترین", "گران ترین", "ارزان ترین", "پربازدیدترین"].map((item) => (
-                                    <span
-                                        key={item}
-                                        className={`item-sort ${activeSort === item ? "active" : ""}`}
-                                        onClick={() => handleSortClick(item)}
-                                        style={{ cursor: "pointer" }}
-                                    >
-                                        {item}
-                                    </span>
-                                ))}
-
-
+                        <div className="sort-top-modern" style={{justifyContent: 'flex-end', direction: 'ltr'}}>
+                            <div className="sort-container" style={{justifyContent: 'flex-end'}}>
+                                <div className="sort-options" style={{order: 1}}>
+                                    {["مرتبط ترین", "گران ترین", "ارزان ترین", "پربازدیدترین"].map((item) => (
+                                        <button
+                                            key={item}
+                                            className={`sort-btn ${activeSort === item ? "active" : ""}`}
+                                            onClick={() => handleSortClick(item)}
+                                        >
+                                            {item}
+                                        </button>
+                                    ))}
+                                </div>
+                                <div className="sort-header" style={{order: 2, marginLeft: '15px'}}>
+                                    <FaSortAmountDown className="sort-icon" />
+                                    <span className="sort-label">مرتب سازی:</span>
+                                </div>
                             </div>
-
                         </div>
-                        <hr style={{ color: 'red', border: '0.2px solid #ddd', width: '99.5%' }} />
 
-                        <div className="search-result row ">
-                            {spre.map((item) => {
-                                return <div className="col-lg-3 col-md-6 col-6 mb-3">
-                                    <div className="card-search">
-                                        <div className="card-header-search">
-                                            <img className="card-img-top" src={item.image} height='255px' />
-                                        </div>
-                                        <h6 className="card-body-search ">{item.title}</h6>
-                                        <div className="d-flex justify-content-between">
-                                            <div>
-                                                <HiOutlineShoppingCart style={{ marginTop: '-3px', color: 'red', fontWeight: 'bold' }} />
-
-                                                <span style={{ fontSize: '14px', fontWeight: '600' }}> حضوری | آنلاین</span>
+                        <div className="search-result-modern row">
+                            {spre.map((item, index) => {
+                                return <div key={index} className="col-lg-3 col-md-6 col-6 mb-4">
+                                    <Link href={`/product/${item.title}`} style={{ textDecoration: 'none', color: '#000' }}>
+                                        <div className="item-product">
+                                            <div className="product-img">
+                                                <img src={item.image} className="img-fluid" alt={item.title} />
+                                                <div className="img-info">
+                                                    <span>{item.views} بازدید</span>
+                                                </div>
+                                                <div className="img-like">
+                                                    <span>
+                                                        <FaRegHeart fontSize={'20px'} className='pt-1' />
+                                                    </span>
+                                                </div>
                                             </div>
-
-                                            <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                                                <span style={{ fontSize: '14px', position: 'relative', top: '1px' }}>4.5</span>
-                                                <box-icon
-                                                    name="star"
-                                                    type="solid"
-                                                    color="#f9d635"
-                                                    size="16px"
-                                                    style={{ position: 'relative', top: '-1px' }}
-                                                ></box-icon>
+                                            <div className="title-card">
+                                                <span>{item.title}</span>
                                             </div>
-
-
+                                            <div className="price">
+                                                <span>{item.price} </span> <span>تومان</span>
+                                            </div>
+                                            <div className="available">
+                                                <span>موجود در {item.stores} فروشگاه</span>
+                                            </div>
                                         </div>
-                                        <div className="text-right mt-3">
-                                            <span
-                                                style={{ fontSize: '16px', fontWeight: '600' }}
-                                            > شروع از : {item.price} تومان </span>
-
-
-                                        </div>
-                                    </div>
+                                    </Link>
                                 </div>
                             })}
 
@@ -689,6 +732,7 @@ export default function SearchPage() {
                     </div>
                 </div>
             </div >
+            <BottomNavigation></BottomNavigation>
             <FooterMain></FooterMain>
 
         </>

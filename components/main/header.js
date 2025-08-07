@@ -120,7 +120,7 @@ export default function Header_Main() {
 
             .header-logo {
                 height: 55px;
-                width: auto;
+                width: 140px;
                 transition: transform 0.3s ease;
             }
 
@@ -291,6 +291,7 @@ export default function Header_Main() {
             @media (max-width: 768px) {
                 .header-logo {
                     height: 45px;
+                    width: 120px;
                 }
 
                 .navbar {
@@ -302,6 +303,7 @@ export default function Header_Main() {
             @media (max-width: 576px) {
                 .header-logo {
                     height: 40px;
+                    width: 100px;
                 }
             }
         `}</style>
