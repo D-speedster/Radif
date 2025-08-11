@@ -604,7 +604,7 @@ const SliderProduct = (prop) => {
               <Link href={`/product/${product.title}`} style={{ textDecoration: 'none', color: '#000' }}>
                 <div className="item-product">
                   <div className="product-img">
-                    <img src={product.image} className="img-fluid" alt={product.title} />
+                    <img src={product.image || '/img/placeholder.png'} className="img-fluid" alt={product.title} />
                     <div className="img-info">
                       <span>{product.views} بازدید</span>
                     </div>

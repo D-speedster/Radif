@@ -169,7 +169,7 @@ export default function HomePage() {
         <Category></Category>
         <SliderProduct title='دیجیتال' Category='digital'></SliderProduct>
         <SliderProduct title='منزل' Category='home'></SliderProduct>
-        <Knowledge {...newsAray}></Knowledge>
+        <Knowledge newsData={newsAray}></Knowledge>
         <SliderProduct title='ورزشی' Category='sports'></SliderProduct>
         {/* <AboutComponent></AboutComponent> */}
         <Topic></Topic>

@@ -1,48 +1,97 @@
-import { LuNewspaper } from "react-icons/lu";
+import React from 'react';
+import { LuNewspaper, LuCalendar, LuTag, LuClock } from 'react-icons/lu';
+import { FaRegNewspaper } from 'react-icons/fa';
 
-function Knowledge(prop) {
+const Knowledge = ({ newsData = {} }) => {
+    const newsItems = Object.entries(newsData);
+
+    if (newsItems.length === 0) {
+        return null;
+    }
+
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('fa-IR', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+        });
+    };
 
     return (
-        <section className="Knowledge" style={{ background: '#FFF !important' }}>
+        <section className="Knowledge" id="news-section">
             <div className="container-custom">
-
-                <div className="title">
-
-                    <LuNewspaper fontSize={'24px'} />
-                    <span style={{ fontSize: '19px' , marginRight : '8px' , fontWeight : '800' , marginTop : '3px'}}>خبر روز </span>
+                {/* Header Section */}
+                <div className="news-header">
+                    <div className="news-title-wrapper">
+                        <div className="news-icon">
+                            <LuNewspaper size={28} />
+                        </div>
+                        <h2 className="news-title">
+                            خبر روز
+                        </h2>
+                        <div className="news-subtitle">
+                            آخرین اخبار تکنولوژی و نوآوری
+                        </div>
+                    </div>
                 </div>
-                <div className="row row-cols-1 row-cols-lg-4 row-cols-md-2 row-cols-sm-2 ">
-                    {Object.entries(prop).map(([key, item]) => (
 
-                        <div className="col mt-4" key={key}>
-                            <div className="card">
-                                <img src={item.img} alt="" className="card-img-top" />
-                                <div className="container-fluid">
-                                    <div className="card-title bg-white">
-                                        {item.title}
-                                    </div>
-                                    <div className="card-footer d-flex justify-content-between">
-                                        <span className="footer-item">
-                                            <box-icon name="news"></box-icon>
+                {/* News Grid */}
+                <div className="news-grid">
+                    {newsItems.map(([key, item]) => (
+                        <article className="news-card" key={key} data-aos="fade-up" data-aos-delay={key * 100}>
+                            <div className="news-card-inner">
+                                {/* Image Container */}
+                                <div className="news-image-container">
+                                    <img 
+                                        src={item.img} 
+                                        alt={item.title}
+                                        className="news-image"
+                                        loading="lazy"
+                                    />
+                                    <div className="news-overlay">
+                                        <div className="news-category">
+                                            <LuTag size={14} />
                                             <span>{item.genre}</span>
-                                        </span>
-                                        <span className="footer-item">
-                                            <box-icon name="calendar"></box-icon>
-                                            <span>{item.createdAt}</span>
-                                        </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Content Container */}
+                                <div className="news-content">
+                                    <h3 className="news-card-title">
+                                        {item.title}
+                                    </h3>
+                                    
+                                    <p className="news-description">
+                                        {item.desc}
+                                    </p>
+
+                                    {/* Footer */}
+                                    <div className="news-footer">
+                                        <div className="news-meta">
+                                            <div className="meta-item">
+                                                <LuCalendar size={16} />
+                                                <span>{formatDate(item.createdAt)}</span>
+                                            </div>
+                                            <div className="meta-item">
+                                                <FaRegNewspaper size={16} />
+                                                <span>{item.genre}</span>
+                                            </div>
+                                        </div>
+                                        <div className="read-more">
+                                            <span>ادامه مطلب</span>
+                                            <LuClock size={14} />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </article>
                     ))}
-
-
-
                 </div>
-
             </div>
-        </section >
-    )
-}
+        </section>
+    );
+};
 
-export default Knowledge
+export default Knowledge;

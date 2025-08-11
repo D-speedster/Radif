@@ -120,7 +120,7 @@ export default function Header_Main() {
 
             .header-logo {
                 height: 55px;
-                width: 140px;
+                width: auto;
                 transition: transform 0.3s ease;
             }
 
