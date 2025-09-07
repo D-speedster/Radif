@@ -1,0 +1,247 @@
+/* استایل‌های اختصاصی صفحه بلاگ */
+
+/* تنظیمات هیرو بلاگ */
+.blog-hero {
+    min-height: 300px;
+}
+
+.blog-hero .neo-gradient.blog-gradient {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+/* رنگ هایلایت ملایم‌تر */
+.title-line.highlight.blog-highlight {
+    background: linear-gradient(90deg, #3b82f6, #64748b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+/* نشان‌های ویژگی بلاگ */
+.blog-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.blog-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.blog-badge:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.blog-badge .badge-icon {
+    font-size: 1rem;
+}
+
+/* آمار بلاگ */
+.blog-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 1rem;
+    min-width: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+/* جستجوی بلاگ */
+.blog-search {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.blog-search-form {
+    width: 100%;
+    position: relative;
+}
+
+.blog-search-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.blog-search-input {
+    width: 100%;
+    padding: 0.6rem 0.8rem 0.6rem 2.5rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    color: white;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.blog-search-input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.blog-search-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-icon-container {
+    position: absolute;
+    left: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* استایل زیرعنوان */
+.blog-hero .neo-subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+}
+
+/* استایل‌های ریسپانسیو */
+@media (max-width: 992px) {
+    .blog-hero {
+        min-height: 250px;
+    }
+    
+    .neo-title {
+        font-size: 2.2rem;
+    }
+    
+    .title-line.highlight.blog-highlight {
+        font-size: 2.5rem;
+    }
+    
+    .blog-hero .neo-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .blog-stats {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-hero {
+        min-height: 250px;
+    }
+    
+    .title-line.highlight.blog-highlight {
+        font-size: 2rem;
+    }
+    
+    .blog-hero .neo-subtitle {
+        font-size: 1rem;
+    }
+    
+    .neo-title {
+        font-size: 2rem;
+    }
+    
+    .blog-badges {
+        justify-content: center;
+    }
+    
+    .blog-search {
+        max-width: 100%;
+    }
+    
+    .blog-stats {
+        justify-content: center;
+        gap: 1rem !important;
+    }
+    
+    .stat-item {
+        padding: 0.75rem;
+        min-width: 80px;
+    }
+    
+    .stat-number {
+        font-size: 1.2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .blog-hero {
+        min-height: 220px;
+    }
+    
+    .neo-title {
+        font-size: 1.75rem;
+    }
+    
+    .title-line.highlight.blog-highlight {
+        font-size: 1.8rem;
+    }
+    
+    .blog-hero .neo-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .stat-item {
+        min-width: 90px;
+        padding: 0.75rem;
+    }
+    
+    .stat-number {
+        font-size: 1.2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem;
+    }
+}

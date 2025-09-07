@@ -1,80 +1,55 @@
 import Link from "next/link"
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import CategoryModal from './CategoryModal'
 
 
 export default function Header_Main() {
     const [isCategoryModalOpen, setIsCategoryModalOpen] = useState(false);
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    // Close mobile menu when window resizes
-    useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth > 992) {
-                setIsMenuOpen(false);
-            }
-        };
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
 
     return (
         <>
         <header className="modern-header">
-            <nav className="container-custom navbar navbar-expand-lg">
-                <Link className="navbar-brand" href="/">
-                    <img src="/img/radif-logo.svg" alt="logo" className="header-logo" />
+            <nav className="container-custom navbar navbar-expand-lg" role="navigation" aria-label="ناوبری اصلی">
+                <Link className="navbar-brand brand" href="/" aria-label="رفتن به صفحه اصلی ردیف">
+                    <img src="/img/radif-logo.svg" alt="لوگوی ردیف" className="header-logo" />
+                    <span className="brand-name">ردیف</span>
                 </Link>
                 
-                <button 
-                    className="navbar-toggler modern-toggler" 
-                    type="button" 
-                    onClick={toggleMenu}
-                    aria-expanded={isMenuOpen}
-                >
-                    <span className={`hamburger-line ${isMenuOpen ? 'active' : ''}`}></span>
-                    <span className={`hamburger-line ${isMenuOpen ? 'active' : ''}`}></span>
-                    <span className={`hamburger-line ${isMenuOpen ? 'active' : ''}`}></span>
-                </button>
-                
-                <div className={`navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarNav">
+                {/* Desktop navigation & actions */}
+                <div className={`navbar-collapse`} id="primary-navigation">
                     <ul className="navbar-nav modern-nav ms-auto">
                         <li className="nav-item">
                             <button 
                                 onClick={() => {
                                     setIsCategoryModalOpen(true);
-                                    setIsMenuOpen(false);
                                 }}
                                 className="nav-link modern-nav-link category-btn"
+                                aria-label="مشاهده همه دسته‌بندی‌ها"
                             >
                                 <span className="nav-text">همه دسته‌بندی‌ها</span>
-                                <span className="nav-indicator"></span>
-                            </button>
-                        </li>
+                                 <span className="nav-indicator"></span>
+                             </button>
+                         </li>
                         <li className="nav-item">
-                            <Link href="/Special-Offers" className="nav-link modern-nav-link" onClick={() => setIsMenuOpen(false)}>
+                            <Link href="/Special-Offers" className="nav-link modern-nav-link">
                                 <span className="nav-text">فروش ویژه</span>
                                 <span className="nav-indicator"></span>
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/Blog" className="nav-link modern-nav-link" onClick={() => setIsMenuOpen(false)}>
+                            <Link href="/Blog" className="nav-link modern-nav-link">
                                 <span className="nav-text">وبلاگ</span>
                                 <span className="nav-indicator"></span>
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/how-to-use" className="nav-link modern-nav-link" onClick={() => setIsMenuOpen(false)}>
+                            <Link href="/how-to-use" className="nav-link modern-nav-link">
                                 <span className="nav-text">نحوه استفاده</span>
                                 <span className="nav-indicator"></span>
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/info/About" className="nav-link modern-nav-link" onClick={() => setIsMenuOpen(false)}>
+                            <Link href="/info/About" className="nav-link modern-nav-link">
                                 <span className="nav-text">درباره ما</span>
                                 <span className="nav-indicator"></span>
                             </Link>
@@ -82,7 +57,7 @@ export default function Header_Main() {
                     </ul>
 
                     <div className="auth-section">
-                        <Link href='/profile' className="auth-link" onClick={() => setIsMenuOpen(false)}>
+                        <Link href='https://panel.radif.org' className="auth-link">
                             <button className="modern-sign-in-button">
                                 <span>ورود</span>
                                 <div className="button-bg"></div>
@@ -101,13 +76,14 @@ export default function Header_Main() {
         
         <style jsx>{`
             .modern-header {
-                background: rgba(255, 255, 255, 0.95);
+                background: #ffffff;
                 backdrop-filter: blur(10px);
                 border-bottom: 1px solid rgba(0, 0, 0, 0.08);
                 position: sticky;
                 top: 0;
                 z-index: 1000;
                 transition: all 0.3s ease;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.06);
             }
 
             .navbar {
@@ -122,52 +98,17 @@ export default function Header_Main() {
                 height: 55px;
                 width: auto;
                 transition: transform 0.3s ease;
+                display: block;
+                object-fit: contain;
+                flex-shrink: 0;
             }
 
             .header-logo:hover {
                 transform: scale(1.05);
             }
 
-            .modern-toggler {
-                border: none;
-                background: none;
-                padding: 6px;
-                border-radius: 8px;
-                transition: all 0.3s ease;
-                position: relative;
-                width: 36px;
-                height: 36px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 3px;
-                order: 3;
-            }
-
-            .modern-toggler:hover {
-                background: rgba(0, 0, 0, 0.05);
-            }
-
             .hamburger-line {
-                width: 24px;
-                height: 2px;
-                background: #333;
-                border-radius: 2px;
-                transition: all 0.3s ease;
-                transform-origin: center;
-            }
-
-            .hamburger-line.active:nth-child(1) {
-                transform: rotate(45deg) translate(6px, 6px);
-            }
-
-            .hamburger-line.active:nth-child(2) {
-                opacity: 0;
-            }
-
-            .hamburger-line.active:nth-child(3) {
-                transform: rotate(-45deg) translate(6px, -6px);
+                display: none;
             }
 
             .modern-nav {
@@ -181,9 +122,10 @@ export default function Header_Main() {
                 position: relative;
                 padding: 12px 20px !important;
                 font-family: 'IRANYEKAN', sans-serif;
-                font-size: 15px;
-                font-weight: 500;
-                color: #2d3748 !important;
+                font-size: 16px;
+                font-weight: 600;
+                letter-spacing: -0.2px;
+                color: #1f2937 !important;
                 text-decoration: none;
                 border-radius: 12px;
                 transition: all 0.3s ease;
@@ -194,6 +136,8 @@ export default function Header_Main() {
                 align-items: center;
                 justify-content: center;
                 overflow: hidden;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
             }
 
             .nav-text {
@@ -279,19 +223,24 @@ export default function Header_Main() {
             }
 
             @media (max-width: 991px) {
-                .modern-toggler {
-                    display: none;
-                }
-
                 .navbar-collapse {
-                    display: none;
+                    display: none !important;
+                }
+                .auth-section {
+                    display: none !important;
+                }
+                .navbar {
+                    justify-content: center;
+                }
+                .navbar-brand.brand {
+                    margin: 0 auto;
                 }
             }
 
             @media (max-width: 768px) {
                 .header-logo {
                     height: 45px;
-                    width: 120px;
+                    width: auto;
                 }
 
                 .navbar {
@@ -303,8 +252,116 @@ export default function Header_Main() {
             @media (max-width: 576px) {
                 .header-logo {
                     height: 40px;
-                    width: 100px;
+                    width: auto;
                 }
+            }
+        `}</style>
+        {/* Header redesigned overrides to align with theme and UX requirements */}
+        <style jsx>{`
+            .modern-header {
+                background: #ffffff;
+                border-bottom: 1px solid rgba(0,0,0,0.06);
+                backdrop-filter: none;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            }
+
+            .navbar {
+                padding: 12px 0;
+                min-height: 72px;
+                display: flex;
+                align-items: center;
+            }
+
+            .navbar-brand.brand {
+                display: inline-flex;
+                align-items: center;
+                gap: 12px;
+                text-decoration: none;
+            }
+
+            .header-logo {
+                height: 44px;
+                width: auto;
+                display: block;
+                object-fit: contain;
+                flex-shrink: 0;
+            }
+
+            .brand-name {
+                font-family: 'IRANYEKAN', sans-serif;
+                font-weight: 800;
+                font-size: 20px;
+                letter-spacing: -0.2px;
+                color: var(--neutral-800, #1e293b);
+                white-space: nowrap;
+                line-height: 1;
+                flex-shrink: 0;
+            }
+
+            .modern-nav {
+                gap: 4px;
+            }
+
+            .modern-nav-link {
+                padding: 10px 16px !important;
+                border-radius: 10px;
+                color: var(--neutral-800, #1f2937) !important;
+                font-size: 16px;
+                font-weight: 600;
+                letter-spacing: -0.2px;
+            }
+
+            .modern-nav-link:hover {
+                background: rgba(102, 126, 234, 0.08) !important;
+                color: var(--primary-color, #667eea) !important;
+            }
+
+            .nav-indicator {
+                background: var(
+                    --primary-gradient,
+                    linear-gradient(90deg, #667eea 0%, #764ba2 100%)
+                );
+            }
+
+            .modern-nav-link:focus-visible,
+            .modern-sign-in-button:focus-visible {
+                outline: 2px solid var(--primary-light, #8fa4f3);
+                outline-offset: 2px;
+            }
+
+            /* Desktop */
+            @media (min-width: 992px) {
+                .navbar-collapse {
+                    position: static;
+                    display: flex !important;
+                    background: transparent;
+                    box-shadow: none;
+                    border-top: none;
+                    padding: 0;
+                    align-items: center;
+                    gap: 12px;
+                }
+                .modern-nav {
+                    display: flex;
+                    align-items: center;
+                    margin-inline-end: 12px;
+                }
+                .auth-section { order: 2; }
+            }
+
+            /* Tablet & Mobile */
+            @media (max-width: 991.98px) {
+                .navbar-collapse { display: none !important; }
+                .auth-section { display: none !important; }
+                .navbar { justify-content: center; }
+                .navbar-brand.brand { margin: 0 auto; }
+            }
+
+            /* Small mobiles */
+            @media (max-width: 576px) {
+                .header-logo { height: 36px; }
+                .brand-name { font-size: 17px; }
+                .modern-sign-in-button { padding: 10px 18px; font-size: 13px; }
             }
         `}</style>
         </>

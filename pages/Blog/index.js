@@ -210,6 +210,8 @@ export default function BlogPage() {
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
                 <link rel="stylesheet" href="/css/index.css" />
                 <link rel="stylesheet" href="/css/theme.css" />
+                <link rel="stylesheet" href="/css/neo-hero.css" />
+                <link rel="stylesheet" href="/css/blog-hero.css" />
             </Head>
 
             <style jsx>{`
@@ -219,52 +221,17 @@ export default function BlogPage() {
                     padding: 0 15px;
                 }
 
-                .blog-header {
-                    background: linear-gradient(135deg, #6f42c1, #8b5cf6, #a855f7);
-                    color: white;
-                    padding: 5rem 0;
+                .search-filter-section {
+                    background: white;
+                    padding: 2rem;
+                    border-radius: 15px;
+                    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
                     margin-bottom: 3rem;
-                    position: relative;
-                    overflow: hidden;
                 }
 
-                .blog-header::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-                    opacity: 0.3;
-                }
-
-                .text-gradient {
-                    background: linear-gradient(45deg, #ffffff, #f8f9fa);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    background-clip: text;
-                }
-
-                .hero-stats {
-                    margin-top: 2rem;
-                }
-
-                .stat-item {
-                    text-align: center;
-                }
-
-                .stat-number {
-                    font-size: 2rem;
-                    font-weight: 700;
-                    color: #ffd700;
-                    display: block;
-                }
-
-                .stat-label {
-                    font-size: 0.9rem;
-                    opacity: 0.9;
-                    margin-top: 0.25rem;
+                .pagination-section {
+                    margin-top: 4rem;
+                    margin-bottom: 2rem;
                 }
 
                 .hero-icon {
@@ -729,37 +696,43 @@ export default function BlogPage() {
 
             <Header_Main />
             
-            <div className="blog-header">
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-8">
-                            <h1 className="display-3 fw-bold mb-4 text-gradient">
-                                بلاگ ردیف
+            {/* Hero Section - مینیمال و ساده */}
+            <div className="neo-hero blog-hero">
+                {/* پس‌زمینه ساده */}
+                <div className="neo-background" aria-hidden="true">
+                    <div className="neo-gradient blog-gradient"></div>
+                </div>
+                
+                {/* محتوای اصلی */}
+                <div className="neo-container">
+                    <div className="neo-content-wrapper">
+                        <div className="neo-content-left">
+                            {/* عنوان اصلی */}
+                            <h1 className="neo-title">
+                                <div className="title-line highlight blog-highlight">بلاگ ردیف</div>
                             </h1>
-                            <p className="lead mb-4 fs-4">مرجع اخبار و مقالات تکنولوژی، هوش مصنوعی و نوآوری</p>
-                            <div className="hero-stats d-flex gap-4">
+
+                            {/* زیرعنوان */}
+                            <h2 className="neo-subtitle">آخرین اخبار و مقالات تکنولوژی</h2>
+                        </div>
+                        
+                        <div className="neo-content-right">
+                            {/* آمار بلاگ */}
+                            <div className="blog-stats">
                                 <div className="stat-item">
                                     <div className="stat-number">{KnowledgeArray.length}</div>
-                                    <div className="stat-label">مقاله منتشر شده</div>
+                                    <div className="stat-label">مقالات</div>
                                 </div>
                                 <div className="stat-item">
                                     <div className="stat-number">{categories.length - 1}</div>
-                                    <div className="stat-label">دسته‌بندی</div>
+                                    <div className="stat-label">دسته‌بندی‌ها</div>
                                 </div>
-                                <div className="stat-item">
-                                    <div className="stat-number">{KnowledgeArray.reduce((sum, post) => sum + post.views, 0).toLocaleString()}</div>
-                                    <div className="stat-label">بازدید کل</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 text-center">
-                            <div className="hero-icon">
-                                <FaNewspaper />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <div className="container">
                 {/* Featured Post */}
