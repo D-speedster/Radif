@@ -1,0 +1,189 @@
+/* استایل‌های اختصاصی صفحه پیشنهادات ویژه */
+
+/* تنظیمات هیرو پیشنهادات ویژه */
+.special-offers-hero {
+    min-height: 600px;
+}
+
+.special-offers-hero .neo-gradient.special-gradient {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+/* رنگ هایلایت ملایم‌تر */
+.title-line.highlight.special-highlight {
+    background: linear-gradient(90deg, #3b82f6, #64748b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* محتوای پیشنهادات ویژه */
+.special-offers-content {
+    padding: 2rem 0;
+}
+
+/* نشان‌های ویژگی */
+.special-offers-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.special-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.special-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.special-badge .badge-icon {
+    font-size: 1.2rem;
+}
+
+/* تایمر پیشنهادات ویژه */
+.special-offers-timer {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.timer-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+.timer-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.timer-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 1rem;
+    min-width: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.timer-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+}
+
+.timer-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0.5rem;
+}
+
+.timer-separator {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-top: -1rem;
+}
+
+.timer-action {
+    width: 100%;
+}
+
+/* استایل‌های ریسپانسیو */
+@media (max-width: 992px) {
+    .neo-content-wrapper {
+        flex-direction: column;
+    }
+
+    .neo-content-left,
+    .neo-content-right {
+        max-width: 100%;
+    }
+
+    .special-offers-timer {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .neo-title {
+        font-size: 2.8rem;
+    }
+
+    .timer-unit {
+        min-width: 70px;
+        padding: 0.8rem;
+    }
+
+    .timer-value {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .special-offers-hero {
+        min-height: 500px;
+    }
+
+    .neo-title {
+        font-size: 2.2rem;
+    }
+
+    .neo-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .special-offers-badges {
+        justify-content: center;
+    }
+
+    .timer-display {
+        gap: 0.3rem;
+    }
+
+    .timer-unit {
+        min-width: 60px;
+        padding: 0.6rem;
+    }
+
+    .timer-value {
+        font-size: 1.8rem;
+    }
+
+    .timer-separator {
+        font-size: 1.8rem;
+    }
+}

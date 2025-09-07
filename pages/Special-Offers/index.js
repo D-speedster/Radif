@@ -153,47 +153,105 @@ export default function SpecialOffers() {
                 <link rel="stylesheet" href="/css/index.css" />
                 <link rel="stylesheet" href="/css/theme.css" />
                 <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+                <link rel="stylesheet" href="/css/neo-hero.css" />
+                <link rel="stylesheet" href="/css/special-offers.css" />
             </Head>
             <Header_Main />
             
-            {/* Hero Section */}
-            <section className="hero-section" style={{
-                background: 'var(--primary-gradient)',
-                padding: '60px 0',
-                color: 'white',
-                textAlign: 'center'
-            }}>
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-8 mx-auto">
-                            <h1 className="display-4 fw-bold mb-3">
-                                <FaFire className="me-3" style={{ color: '#ff6b35' }} />
-                                پیشنهادات ویژه ردیف
+            {/* Hero Section - بازطراحی شده مشابه صفحه اصلی */}
+            <div className="neo-hero special-offers-hero">
+                {/* پس‌زمینه با افکت‌های متحرک */}
+                <div className="neo-background" aria-hidden="true">
+                    <div className="neo-gradient special-gradient"></div>
+                    <div className="neo-grid"></div>
+                    <div className="neo-circles">
+                        {[...Array(5)].map((_, i) => (
+                            <div key={i} className={`neo-circle circle-${i + 1}`}></div>
+                        ))}
+                    </div>
+                    <div className="neo-particles">
+                        {[...Array(20)].map((_, i) => (
+                            <div key={i} className={`neo-particle particle-${i + 1}`}></div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* محتوای اصلی - طراحی مینیمال و مدرن */}
+                <div className="neo-container">
+                    <div className="neo-content-wrapper special-offers-content">
+                        <div className="neo-content-left">
+                            {/* نشان ویژه */}
+                            <div className="neo-badge" aria-label="special-offers-badge">
+                                <span className="badge-icon">🔥</span>
+                                <span className="badge-text">پیشنهادات ویژه و تخفیف‌های استثنایی</span>
+                            </div>
+
+                            {/* عنوان اصلی */}
+                            <h1 className="neo-title">
+                                <div className="title-line">فرصت‌های</div>
+                                <div className="title-line">خرید</div>
+                                <div className="title-line highlight special-highlight">استثنایی</div>
                             </h1>
-                            <p className="lead mb-4">
-                                بهترین تخفیف‌ها و پیشنهادات روز را از دست ندهید!
-                            </p>
-                            <div className="d-flex justify-content-center gap-3 flex-wrap">
-                                <div className="badge bg-warning text-dark fs-6 p-3">
-                                    <FaPercent className="me-2" />
-                                    تخفیف تا ۵۰%
+
+                            {/* زیرعنوان */}
+                            <h2 className="neo-subtitle">بهترین تخفیف‌ها و پیشنهادات روز را از دست ندهید!</h2>
+
+                            {/* توضیحات */}
+                            <p className="neo-description">در این صفحه می‌توانید جدیدترین پیشنهادات ویژه و تخفیف‌های شگفت‌انگیز محصولات را مشاهده کنید.</p>
+
+                            {/* نشان‌های ویژگی */}
+                            <div className="special-offers-badges">
+                                <div className="special-badge">
+                                    <FaPercent className="badge-icon" />
+                                    <span>تخفیف تا ۵۰%</span>
                                 </div>
-                                <div className="badge bg-success fs-6 p-3">
-                                    <FaGift className="me-2" />
-                                    ارسال رایگان
+                                <div className="special-badge">
+                                    <FaGift className="badge-icon" />
+                                    <span>ارسال رایگان</span>
                                 </div>
-                                <div className="badge bg-info fs-6 p-3">
-                                    <BsLightning className="me-2" />
-                                    فروش ویژه
+                                <div className="special-badge">
+                                    <BsLightning className="badge-icon" />
+                                    <span>فروش ویژه</span>
                                 </div>
+                                <div className="special-badge">
+                                    <FaClock className="badge-icon" />
+                                    <span>زمان محدود</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* سمت راست - نمایش تایمر */}
+                        <div className="neo-content-right">
+                            <div className="special-offers-timer">
+                                <div className="timer-title">پایان تخفیف‌های ویژه</div>
+                                <div className="timer-display">
+                                    <div className="timer-unit">
+                                        <div className="timer-value">{timeLeft.hours}</div>
+                                        <div className="timer-label">ساعت</div>
+                                    </div>
+                                    <div className="timer-separator">:</div>
+                                    <div className="timer-unit">
+                                        <div className="timer-value">{timeLeft.minutes}</div>
+                                        <div className="timer-label">دقیقه</div>
+                                    </div>
+                                    <div className="timer-separator">:</div>
+                                    <div className="timer-unit">
+                                        <div className="timer-value">{timeLeft.seconds}</div>
+                                        <div className="timer-label">ثانیه</div>
+                                    </div>
+                                </div>
+                                <Link href="#flash-sale" className="neo-search-btn timer-action">
+                                    <span className="btn-text">مشاهده پیشنهادات</span>
+                                    <div className="btn-arrow" aria-hidden="true">→</div>
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
             {/* Flash Sale Section */}
-            <section className="flash-sale-section py-5">
+            <section id="flash-sale" className="flash-sale-section py-5">
                 <div className="container">
                     <div className="row mb-4">
                         <div className="col-12">
