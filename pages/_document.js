@@ -7,6 +7,7 @@ export default function Document() {
         <link rel="stylesheet" href="/css/theme.css" />
         <link rel="stylesheet" href="/css/neo-hero.css" />
         <link rel="stylesheet" href="/css/footer.css" />
+        <link rel="stylesheet" href="/css/search.css" />
       </Head>
       <body>
         <Main />
