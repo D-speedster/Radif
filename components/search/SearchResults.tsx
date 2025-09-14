@@ -406,7 +406,7 @@ export default function SearchResults({ query }: SearchResultsProps) {
                 <span>فقط کالاهای موجود</span>
               </label>
               <label className="filter-option">
-                <input 
+                {/* <input 
                   type="checkbox" 
                   checked={filters.shipping === 'free'} 
                   onChange={e=>{
@@ -415,11 +415,11 @@ export default function SearchResults({ query }: SearchResultsProps) {
                     fetchResults(query,1,false);
                   }} 
                   aria-label="ارسال رایگان"
-                />
+                /> */}
                 <span>ارسال رایگان</span>
               </label>
               <label className="filter-option">
-                <input 
+                {/* <input 
                   type="checkbox" 
                   checked={!!filters.discount} 
                   onChange={e=>{
@@ -428,7 +428,7 @@ export default function SearchResults({ query }: SearchResultsProps) {
                     fetchResults(query,1,false);
                   }} 
                   aria-label="دارای تخفیف"
-                />
+                /> */}
                 <span>دارای تخفیف</span>
               </label>
             </div>
@@ -783,7 +783,7 @@ export default function SearchResults({ query }: SearchResultsProps) {
                 <span>فقط کالاهای موجود</span>
               </label>
               <label className="filter-option">
-                <input 
+                {/* <input 
                   type="checkbox" 
                   checked={filters.shipping === 'free'} 
                   onChange={e=>{
@@ -792,11 +792,11 @@ export default function SearchResults({ query }: SearchResultsProps) {
                     fetchResults(query,1,false);
                   }} 
                   aria-label="ارسال رایگان"
-                />
+                /> */}
                 <span>ارسال رایگان</span>
               </label>
               <label className="filter-option">
-                <input 
+                {/* <input 
                   type="checkbox" 
                   checked={!!filters.discount} 
                   onChange={e=>{
@@ -805,7 +805,7 @@ export default function SearchResults({ query }: SearchResultsProps) {
                     fetchResults(query,1,false);
                   }} 
                   aria-label="دارای تخفیف"
-                />
+                /> */}
                 <span>دارای تخفیف</span>
               </label>
             </div>
